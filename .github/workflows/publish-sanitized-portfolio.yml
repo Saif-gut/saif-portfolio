@@ -1,0 +1,43 @@
+name: Publish sanitized portfolio source
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-sanitized-portfolio.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Expand sanitized portfolio source
+        shell: bash
+        run: |
+          set -euo pipefail
+          unzip -t saif-portfolio-latest-source.zip
+          rm -rf extracted
+          mkdir extracted
+          unzip -q saif-portfolio-latest-source.zip -d extracted
+          project_root="$(find extracted -type f -name index.html | head -n 1 | xargs dirname)"
+          test -f "$project_root/index.html"
+          test -f "$project_root/css/style.css"
+          rsync -a --delete --exclude='.git' --exclude='.github' "$project_root"/ ./
+          rm -rf extracted
+          rm -f saif-portfolio-latest-source.zip
+          rm -f .github/workflows/publish-sanitized-portfolio.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish latest sanitized portfolio source'
+          git push
