@@ -41,6 +41,7 @@
     <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 4 6.2 3.5 3.5 0 0 0 3 12a3.5 3.5 0 0 0 2 5.5A3 3 0 0 0 10 20V4.5Zm5 0A3 3 0 0 1 20 6.2a3.5 3.5 0 0 1 1 5.8 3.5 3.5 0 0 1-2 5.5A3 3 0 0 1 14 20V4.5ZM10 9H7m7 5h3"/></symbol>
     <symbol id="icon-learn" viewBox="0 0 24 24"><path d="M4 19 19 4m-8 0h8v8"/><path d="M4 5v14h14"/></symbol>
     <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="icon-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="8" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="15" width="7" height="6" rx="1.5"/></symbol>
   </svg>
 
   <aside class="sidebar" aria-label="Seitennavigation">
@@ -57,6 +58,7 @@
         <a class="side-nav__link" href="#skills"><svg><use href="#icon-skills"/></svg><span>Skills</span></a>
         <a class="side-nav__link" href="#lernweg"><svg><use href="#icon-route"/></svg><span>Mein Weg</span></a>
         <a class="side-nav__link" href="#projekte"><svg><use href="#icon-folder"/></svg><span>Projekte</span></a>
+        <a class="side-nav__link" href="#jarvis-dashboard"><svg><use href="#icon-dashboard"/></svg><span>Jarvis Dashboard</span></a>
         <a class="side-nav__link" href="#ausbildung"><svg><use href="#icon-briefcase"/></svg><span>Ausbildung</span></a>
         <a class="side-nav__link" href="#kontakt"><svg><use href="#icon-mail"/></svg><span>Kontakt</span></a>
       </nav>
@@ -77,7 +79,7 @@
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
       <a href="#start">Start</a><a href="#about">Über mich</a><a href="#warum-it">Warum IT?</a>
       <a href="#bot-projekt">Bot-Projekt</a><a href="#skills">Skills</a>
-      <a href="#projekte">Projekte</a><a href="#ausbildung">Ausbildung</a><a href="#kontakt">Kontakt</a>
+      <a href="#projekte">Projekte</a><a href="#jarvis-dashboard">Jarvis Dashboard</a><a href="#ausbildung">Ausbildung</a><a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
@@ -89,7 +91,7 @@
           <p class="eyebrow"><span class="eyebrow__dot"></span>Hallo, ich bin</p>
           <h1 id="hero-title">Saif <span>Aldien</span></h1>
           <p class="hero__role">Angehender IT-Auszubildender</p>
-          <p class="hero__text">Ich interessiere mich für IT, Softwareentwicklung und digitale Technologien. Besonders spannend finde ich Webentwicklung und Game Development. Ich lerne Schritt für Schritt, entwickle meine Fähigkeiten weiter und suche eine Ausbildung, in der ich mein Interesse an Technologie zum Beruf machen kann.</p>
+          <p class="hero__text">Ich interessiere mich für IT, Softwareentwicklung und digitale Technologien. Zuletzt habe ich mit dem Jarvis Dashboard mein bisher umfangreichstes IT-Projekt abgeschlossen, bei dem ich Frontend, Backend, Systemdaten und Jarvis miteinander verbunden habe. Mein Ziel ist eine Ausbildung, in der ich mich fachlich weiterentwickeln und praktische Erfahrung sammeln kann.</p>
           <p class="hero__motto">Lernen. Entwickeln. Zukunft gestalten.</p>
           <div class="button-row">
             <a class="button button--primary" href="#about">Mehr über mich <svg><use href="#icon-arrow"/></svg></a>
@@ -108,9 +110,8 @@
   <span class="code-muted">&lt;</span><span class="code-blue">h1</span><span class="code-muted">&gt;</span>Saif <span class="code-muted">&lt;</span><span class="code-blue">span</span><span class="code-muted">&gt;</span>Aldien<span class="code-muted">&lt;/</span><span class="code-blue">span</span><span class="code-muted">&gt;&lt;/</span><span class="code-blue">h1</span><span class="code-muted">&gt;</span>
   <span class="code-muted">&lt;</span><span class="code-blue">h2</span><span class="code-muted">&gt;</span>Angehender IT-Auszubildender<span class="code-muted">&lt;/</span><span class="code-blue">h2</span><span class="code-muted">&gt;</span>
   <span class="code-muted">&lt;</span><span class="code-blue">p</span><span class="code-muted">&gt;</span>
-    Ich interessiere mich für IT,
-    Softwareentwicklung und digitale
-    Technologien.
+    Mein zuletzt abgeschlossenes Full-Stack-Projekt:
+    das Jarvis Dashboard.
   <span class="code-muted">&lt;/</span><span class="code-blue">p</span><span class="code-muted">&gt;</span>
   <span class="code-muted">&lt;</span><span class="code-blue">p</span> <span class="code-purple">class</span><span class="code-muted">=</span><span class="code-green">"motto"</span><span class="code-muted">&gt;</span>
     Lernen. Entwickeln. Zukunft gestalten.
@@ -135,25 +136,6 @@
       </div>
     </section>
 
-    <section class="location-section" id="standort" aria-labelledby="location-title">
-      <div class="container location-grid">
-        <figure class="location-image-card reveal">
-          <img src="assets/images/bad-segeberg.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Stimmungsvolle Darstellung von Bad Segeberg mit Blick über den See auf die Stadt und den Kalkberg">
-          <figcaption class="location-badge"><svg aria-hidden="true"><use href="#icon-pin"/></svg><span>Bad Segeberg, Deutschland</span></figcaption>
-        </figure>
-        <article class="location-info-card reveal">
-          <p class="eyebrow">Mein Standort</p>
-          <h2 id="location-title">Zuhause in<br>Bad Segeberg</h2>
-          <div class="location-info-card__copy">
-            <p>Ich komme aus Bad Segeberg, einer Stadt in Schleswig-Holstein, die Ruhe, Natur und eine angenehme Umgebung miteinander verbindet.</p>
-            <p>Die Nähe zu Lübeck und Hamburg eröffnet interessante Perspektiven und motiviert mich, mich beruflich im IT-Bereich weiterzuentwickeln.</p>
-            <p>Bad Segeberg ist für mich ein Ort, an dem ich verwurzelt bin und von dem aus ich offen in meine Zukunft im Bereich IT und Entwicklung blicke.</p>
-          </div>
-          <a class="button button--secondary" href="#about">Mehr über mich <svg><use href="#icon-arrow"/></svg></a>
-        </article>
-      </div>
-    </section>
-
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="section-heading reveal"><p class="eyebrow">01 / Über mich</p><h2 id="about-title">Neugierig auf das, was hinter<br>dem Bildschirm passiert.</h2></div>
@@ -162,6 +144,8 @@
             <p class="lead">Technik und Computer interessieren mich schon seit langer Zeit. Besonders spannend finde ich den Moment, wenn man nicht nur ein Programm benutzt, sondern beginnt zu verstehen, wie es im Hintergrund funktioniert.</p>
             <p>Deshalb beschäftige ich mich zunehmend mit Webentwicklung und Programmierung. Ich lerne aktuell die Grundlagen von HTML, CSS und JavaScript und möchte mein Wissen Schritt für Schritt erweitern.</p>
             <p>Zusätzlich lerne ich, Codex sinnvoll als Werkzeug für Entwicklungsaufgaben einzusetzen. Dabei übe ich, Aufgaben präzise zu beschreiben, generierten Code nachzuvollziehen und ihn Schritt für Schritt an meine Anforderungen anzupassen.</p>
+            <p>Das Gelernte habe ich bereits in einem eigenen Bot-Projekt praktisch angewendet und das Projekt vollständig abgeschlossen.</p>
+            <p>Mit dem Jarvis Dashboard habe ich mein bisher umfangreichstes IT-Lernprojekt abgeschlossen. Dabei habe ich ein React-/TypeScript-Frontend mit einem Python-/FastAPI-Backend verbunden, echte Systemdaten verarbeitet und die Anwendung mit Jarvis integriert.</p>
             <p>Mein langfristiges Ziel ist es, praktische Erfahrung zu sammeln, in einem Team zu lernen und mich beruflich im IT-Bereich weiterzuentwickeln.</p>
           </div>
           <div class="quality-grid">
@@ -185,27 +169,37 @@
       </div>
     </section>
 
-    <section class="section" id="bot-projekt" aria-labelledby="bot-title">
+    <section class="section" id="bot-projekt" aria-labelledby="project-pair-title">
       <div class="container">
-        <article class="game-card reveal">
-          <div class="game-card__art" aria-hidden="true">
-            <div class="pixel-grid"></div>
-            <div class="bot-nodes"><i></i><i></i><i></i><i></i></div>
-            <svg><use href="#icon-bot"/></svg><span>BUILD • TEST<br>IMPROVE</span>
-          </div>
-          <div class="game-card__content">
-            <p class="eyebrow">03 / Aktuelles Lernprojekt</p>
-            <h2 id="bot-title">Mein Bot-Projekt</h2>
-            <p class="subtitle">Von einer Idee zu einem eigenen digitalen Helfer.</p>
-            <p>Aktuell beschäftige ich mich mit der Entwicklung eines eigenen Bots. Mein Ziel ist es, einen digitalen Helfer zu entwickeln, der bei verschiedenen Aufgaben unterstützen und wiederkehrende Abläufe vereinfachen kann.</p>
-            <p>Das Projekt befindet sich noch in Entwicklung. Dabei lerne ich Schritt für Schritt, wie man Funktionen plant, Probleme aufteilt, Logik entwickelt und einzelne Bestandteile zu einem funktionierenden System verbindet.</p>
-            <p>Gleichzeitig nutze ich das Projekt, um mehr praktische Erfahrung mit Programmierung und modernen Entwicklungswerkzeugen wie Codex zu sammeln.</p>
-            <p class="honesty-note"><svg><use href="#icon-check"/></svg><span><strong>Aktueller Status:</strong> Der Bot befindet sich aktuell in Entwicklung. Ich erweitere ihn Schritt für Schritt und nutze das Projekt gleichzeitig, um mein Wissen praktisch anzuwenden und neue Dinge zu lernen.</span></p>
-            <div class="learning-targets"><div><h3>Was ich bei diesem Projekt lerne</h3><span>Aktuelles Lernprojekt</span></div>
-              <ul class="tag-list" aria-label="Lernbereiche des Bot-Projekts"><li>Bot Development</li><li>Programming Logic</li><li>Automation</li><li>Problem Solving</li><li>Codex</li><li>Learning Project</li><li>Testing</li><li>Iteration</li></ul>
+        <div class="project-pair">
+          <article class="project-panel reveal">
+            <div class="project-panel__art project-panel__art--bot" aria-hidden="true">
+              <div class="pixel-grid"></div><div class="bot-nodes"><i></i><i></i><i></i><i></i></div><svg><use href="#icon-bot"/></svg><span>BUILD • TEST<br>IMPROVE</span>
             </div>
-          </div>
-        </article>
+            <div class="project-panel__content">
+              <p class="eyebrow">03 / Abgeschlossenes Projekt</p><h2 id="project-pair-title">Mein Bot-Projekt</h2><p class="subtitle">Von einer Idee zu einem eigenen digitalen Helfer.</p>
+              <p>Ich habe meinen ersten eigenen Bot vollständig entwickelt. Ziel des Projekts war es, einen digitalen Helfer zu bauen, der bei verschiedenen Aufgaben unterstützen und wiederkehrende Abläufe vereinfachen kann.</p>
+              <p>Während der Entwicklung habe ich gelernt, Funktionen zu planen, Programmlogik umzusetzen, Probleme Schritt für Schritt zu lösen, verschiedene Bestandteile miteinander zu verbinden und das Ergebnis zu testen und zu verbessern.</p>
+              <p>Das Projekt war für mich eine wichtige praktische Erfahrung, weil ich dabei mein bisheriges Wissen anwenden und gleichzeitig den Umgang mit modernen Entwicklungswerkzeugen wie Codex weiter vertiefen konnte.</p>
+              <p class="honesty-note"><svg><use href="#icon-check"/></svg><span><strong>Projekt abgeschlossen:</strong> Der Bot ist vollständig entwickelt und das Projekt ist abgeschlossen. Es gehört zu meinen ersten größeren praktischen Entwicklungsprojekten.</span></p>
+              <div class="learning-targets"><div><h3>Was ich bei diesem Projekt gelernt habe</h3><span>Praxisprojekt abgeschlossen</span></div><ul class="tag-list" aria-label="Lernbereiche des Bot-Projekts"><li>Bot Development</li><li>Programming Logic</li><li>Automation</li><li>Problem Solving</li><li>Codex</li><li>Praxisprojekt</li><li>Testing</li><li>Iteration</li></ul></div>
+            </div>
+          </article>
+          <article class="project-panel project-panel--jarvis reveal">
+            <div class="project-panel__art project-panel__art--jarvis" aria-hidden="true">
+              <div class="pixel-grid"></div><div class="jarvis-card-preview"><div class="jarvis-card-preview__bar"><i></i><i></i><i></i><b>JARVIS // LOCAL</b></div><div class="jarvis-card-preview__grid"><span><small>CPU</small><strong>24%</strong></span><span><small>RAM</small><strong>48%</strong></span><span><small>Wetter</small><strong>17 °C</strong></span><span><small>Tasks</small><strong>4 offen</strong></span></div><p>Jarvis · Verbunden</p></div><span>UI MOCKUP · KEINE LIVE-WERTE</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="eyebrow">03 / Neuestes abgeschlossenes Projekt</p><h2>Jarvis Dashboard</h2><p class="subtitle">Ein lokales persönliches IT-Dashboard für Systemstatus, Aufgaben und mehr.</p>
+              <p>Ich habe das Jarvis Dashboard vollständig umgesetzt. Es ist ein lokales persönliches IT-Dashboard, das als Kontrollzentrum für meinen Computer dient.</p>
+              <p>Das Projekt verbindet ein React- und TypeScript-Frontend mit einem lokalen Python- und FastAPI-Backend und zeigt echte Systeminformationen wie CPU-, RAM- und Speicher-Auslastung an.</p>
+              <p>Zusätzlich enthält das Dashboard Funktionen für Aufgaben, Notizen und Wetterinformationen. Die Jarvis-Verbindung wurde vollständig integriert und ist Teil des fertigen Projekts.</p>
+              <p>Mit diesem Projekt habe ich praktische Erfahrung in Frontend- und Backend-Entwicklung, API-Kommunikation, Systemdaten, lokaler Datenverwaltung, Tests, Architektur und der Verbindung verschiedener Software-Komponenten gesammelt.</p>
+              <p class="honesty-note honesty-note--development"><svg><use href="#icon-check"/></svg><span><strong>Projekt abgeschlossen:</strong> Frontend, Backend, Systemstatus, Aufgaben, Notizen, Wetter und die Jarvis-Verbindung wurden zu einem funktionierenden lokalen IT-Dashboard zusammengeführt.</span></p>
+              <div class="learning-targets"><div><h3>Technologien &amp; Lerninhalte</h3><span>Fertiggestellt</span></div><ul class="tag-list" aria-label="Technologien des Jarvis Dashboards"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>psutil</li><li>Open-Meteo</li><li>Tasks</li><li>Notes</li><li>Testing</li><li>Local App</li><li>Jarvis Integration</li></ul></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -221,7 +215,7 @@
               <div class="skill"><div><strong>JavaScript</strong><span>Lernphase</span></div><div class="level level--2" aria-label="Lernphase: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
               <div class="skill"><div><strong>VS Code</strong><span>Aktive Nutzung</span></div><div class="level level--2" aria-label="Aktive Nutzung: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
               <div class="skill"><div><strong>Webentwicklung</strong><span>Grundlagen</span></div><div class="level level--1" aria-label="Grundlagen: 1 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
-              <div class="skill"><div><strong>Bot Development</strong><span>Aktuelles Lernprojekt</span></div><div class="level level--2" aria-label="Aktuelles Lernprojekt: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
+              <div class="skill"><div><strong>Bot Development</strong><span>Abgeschlossenes Projekt</span></div><div class="level level--2" aria-label="Abgeschlossenes Projekt: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
               <div class="skill"><div><strong>Codex</strong><span>In Einarbeitung</span></div><div class="level level--2" aria-label="In Einarbeitung: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
             </div>
             <p class="panel-note">Diese Übersicht zeigt meinen aktuellen Lernstand und wird mit meinen Fortschritten aktualisiert.</p>
@@ -244,12 +238,13 @@
     <section class="section" id="lernweg" aria-labelledby="path-title">
       <div class="container">
         <div class="section-heading reveal"><p class="eyebrow">05 / Fortschritt</p><h2 id="path-title">Mein Lernweg</h2><p>Schritt für Schritt vom Interesse zur praktischen Anwendung.</p></div>
-        <ol class="timeline reveal">
+        <ol class="timeline timeline--six reveal">
           <li><span class="timeline__number">01</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Grundlagen</span><h3>HTML</h3><p>Aufbau und Struktur einfacher Webseiten verstehen.</p></div></li>
           <li><span class="timeline__number">02</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Grundlagen</span><h3>CSS</h3><p>Layouts, Farben, Abstände und visuelle Gestaltung umsetzen.</p></div></li>
           <li><span class="timeline__number">03</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">In Arbeit</span><h3>JavaScript</h3><p>Logik und Interaktivität Schritt für Schritt kennenlernen.</p></div></li>
           <li><span class="timeline__number">04</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Aktuell</span><h3>Eigene Projekte</h3><p>Kleine Projekte umsetzen und das Gelernte praktisch anwenden.</p></div></li>
-          <li><span class="timeline__number">05</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Aktuelles Projekt</span><h3>Bot Development</h3><p>Einen eigenen Bot Schritt für Schritt vollständig entwickeln, Funktionen planen, testen, verbessern und zu einem funktionierenden Projekt verbinden.</p></div></li>
+          <li><span class="timeline__number">05</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Abgeschlossen</span><h3>Bot Development</h3><p>Meinen ersten eigenen Bot vollständig entwickelt, getestet und als praktisches Projekt abgeschlossen.</p></div></li>
+          <li><span class="timeline__number">06</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--complete">Abgeschlossen</span><h3>Jarvis Dashboard</h3><p>Mein bisher umfangreichstes IT-Lernprojekt vollständig umgesetzt: React und TypeScript im Frontend mit Python und FastAPI im Backend verbunden, echte Systemdaten integriert und die Anwendung mit Jarvis verknüpft.</p></div></li>
         </ol>
       </div>
     </section>
@@ -258,18 +253,95 @@
       <div class="container">
         <div class="section-heading reveal"><p class="eyebrow">06 / Learning Lab</p><h2 id="projects-title">Projekte &amp; Learning Lab</h2><p>Hier dokumentiere ich meinen Fortschritt.</p></div>
         <div class="projects-grid">
-          <article class="project-card project-card--featured reveal">
-            <div class="project-preview preview--bot" aria-hidden="true"><svg><use href="#icon-bot"/></svg><span>IN DEVELOPMENT</span></div>
-            <div class="project-card__body"><span class="badge badge--active">In Entwicklung</span><h3>Eigener Bot</h3><p>Ein eigenes Bot-Projekt, das verschiedene Aufgaben unterstützen und Abläufe vereinfachen soll. Ich entwickle das Projekt Schritt für Schritt und nutze es, um Programmierlogik, strukturiertes Arbeiten und moderne Entwicklungswerkzeuge praktisch zu lernen.</p><ul class="tag-list"><li>Bot Development</li><li>Logic</li><li>Automation</li><li>Codex</li></ul><div class="project-actions"><a class="button button--primary button--small" href="#bot-projekt">Mehr erfahren <svg><use href="#icon-arrow"/></svg></a></div></div>
+          <article class="project-card project-card--featured project-card--jarvis reveal">
+            <div class="project-preview preview--jarvis" aria-hidden="true">
+              <div class="preview-dashboard">
+                <span class="preview-dashboard__bar"><i></i><i></i><i></i><b>JARVIS // LOCAL</b></span>
+                <span class="preview-dashboard__tile preview-dashboard__tile--wide"><small>System</small><strong>Online</strong></span>
+                <span class="preview-dashboard__tile"><small>CPU</small><strong>24%</strong></span>
+                <span class="preview-dashboard__tile"><small>RAM</small><strong>48%</strong></span>
+              </div>
+              <span class="preview-label">UI MOCKUP</span>
+            </div>
+            <div class="project-card__body"><span class="badge badge--complete">Fertiggestellt</span><h3>Jarvis Dashboard</h3><p>Vollständig umgesetztes lokales IT-Dashboard mit React, TypeScript, Python und FastAPI. Es zeigt echte Systeminformationen, verwaltet Aufgaben und Notizen, integriert Wetterdaten und ist mit Jarvis verbunden.</p><ul class="tag-list"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>System Monitoring</li><li>Jarvis</li><li>Local App</li></ul><div class="project-actions"><a class="button button--primary button--small" href="#jarvis-dashboard">Projekt ansehen <svg><use href="#icon-arrow"/></svg></a></div></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-preview preview--bot" aria-hidden="true"><svg><use href="#icon-bot"/></svg><span>FERTIGGESTELLT</span></div>
+            <div class="project-card__body"><span class="badge badge--complete">Fertiggestellt</span><h3>Mein Bot-Projekt</h3><p>Abgeschlossenes KI-Bot-Projekt, bei dem ich Programmlogik, Problemlösung, Testing und den praktischen Einsatz moderner Entwicklungswerkzeuge angewendet habe.</p><ul class="tag-list"><li>Bot Development</li><li>Logic</li><li>Automation</li><li>Codex</li></ul><div class="project-actions"><a class="button button--secondary button--small" href="#bot-projekt">Mehr erfahren <svg><use href="#icon-arrow"/></svg></a></div></div>
           </article>
           <article class="project-card reveal">
             <div class="project-preview preview--portfolio" aria-hidden="true"><div class="browser-frame"><span></span><i></i><i></i><b>SA</b></div></div>
-            <div class="project-card__body"><span class="badge badge--active">Aktuelles Projekt</span><h3>Portfolio Website</h3><p>Meine persönliche Portfolio-Website, mit der ich meine Interessen, meinen Lernweg und meine Ziele im IT-Bereich präsentiere.</p><ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-actions"><a class="button button--secondary button--small" href="#start">Projekt ansehen <svg><use href="#icon-external"/></svg></a></div></div>
+            <div class="project-card__body"><span class="badge">Eigene Website</span><h3>Portfolio Website</h3><p>Meine persönliche Portfolio-Website, mit der ich meine Interessen, meinen Lernweg und meine Ziele im IT-Bereich präsentiere.</p><ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-actions"><a class="button button--secondary button--small" href="#start">Projekt ansehen <svg><use href="#icon-external"/></svg></a></div></div>
           </article>
           <article class="project-card reveal">
             <div class="project-preview preview--code" aria-hidden="true"><span>{ }</span><i></i><i></i><i></i></div>
             <div class="project-card__body"><span class="badge badge--future">Geplant</span><h3>JavaScript Mini Project</h3><p>Ein kleines Projekt, um JavaScript und Programmlogik praktisch zu üben.</p><ul class="tag-list"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section jarvis-section" id="jarvis-dashboard" aria-labelledby="jarvis-title">
+      <div class="container">
+        <div class="jarvis-intro">
+          <div class="jarvis-copy reveal">
+            <p class="eyebrow">Abgeschlossenes Full-Stack-Lernprojekt</p>
+            <span class="badge badge--complete">Fertiggestellt</span>
+            <h2 id="jarvis-title">Jarvis Dashboard</h2>
+            <p class="subtitle">Ein lokales persönliches Kontrollzentrum für meinen Computer.</p>
+            <p>Ich habe das Jarvis Dashboard als lokale Web-App vollständig umgesetzt. Ein modernes React-/TypeScript-Frontend kommuniziert mit einem Python-/FastAPI-Backend und stellt echte lokale Systeminformationen wie CPU-, RAM- und Speicher-Auslastung dar.</p>
+            <p>Das Dashboard enthält Aufgaben, Notizen und lokale Wetterinformationen. Es ist mit meinem Assistenten Jarvis verbunden und bildet mit ihm ein lokales persönliches System.</p>
+            <ul class="tag-list jarvis-tech"><li>React</li><li>TypeScript</li><li>Vite</li><li>CSS</li><li>Python</li><li>FastAPI</li><li>psutil</li><li>Lokale Datenverwaltung</li><li>Open-Meteo</li><li>Testing</li><li>Local App</li><li>Jarvis Integration</li></ul>
+          </div>
+
+          <figure class="jarvis-mockup reveal" aria-labelledby="mockup-caption">
+            <figcaption id="mockup-caption"><span>Dashboard-Vorschau</span><small>UI-Mockup · keine Live-Werte</small></figcaption>
+            <div class="mockup-window">
+              <div class="mockup-window__bar"><span></span><span></span><span></span><b>JARVIS DASHBOARD</b><i>LOCAL</i></div>
+              <div class="mockup-grid">
+                <article class="mockup-card mockup-card--chart"><div><small>Systemstatus</small><strong>CPU <span>24%</span></strong></div><div class="mock-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+                <article class="mockup-card"><small>Arbeitsspeicher</small><strong>48%</strong><span class="mockup-meter"><i></i></span></article>
+                <article class="mockup-card"><small>Wetter · lokal</small><strong>17 °C</strong><span>Beispielwert</span></article>
+                <article class="mockup-card"><small>Aufgaben</small><strong>4 offen</strong><span>Beispieldaten</span></article>
+                <article class="mockup-card mockup-card--offline"><small>Jarvis Status</small><strong>Verbunden</strong><span>Integration aktiv</span></article>
+              </div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="jarvis-status reveal">
+          <div><span class="badge badge--complete">Fertiggestellt</span><h3>Projekt abgeschlossen</h3></div>
+          <p>Das Jarvis Dashboard ist vollständig umgesetzt. Frontend, Backend, Systemstatus, Aufgaben, Notizen, Wetter und die Jarvis-Verbindung wurden zu einem funktionierenden lokalen IT-Dashboard zusammengeführt.</p>
+        </div>
+
+        <div class="jarvis-features">
+          <article class="jarvis-feature reveal"><span>01</span><h3>Systemstatus</h3><p>Automatisch aktualisierte lokale Daten zu CPU, RAM, Speicher, CPU-Kernen, Betriebssystem und Computername.</p></article>
+          <article class="jarvis-feature reveal"><span>02</span><h3>Verlauf</h3><p>Übersichtliche Diagramme für die Entwicklung der CPU- und RAM-Auslastung.</p></article>
+          <article class="jarvis-feature reveal"><span>03</span><h3>Wetter</h3><p>Open-Meteo-Wetterdaten mit Temperatur, gefühlter Temperatur, Wind, Regenchance sowie Stunden- und Morgen-Vorschau.</p></article>
+          <article class="jarvis-feature reveal"><span>04</span><h3>Aufgaben</h3><p>Lokale Aufgaben erstellen, bearbeiten, erledigen, löschen und nach Priorität, Fälligkeit oder Status filtern.</p></article>
+          <article class="jarvis-feature reveal"><span>05</span><h3>Notizen</h3><p>Notizen erstellen, bearbeiten, durchsuchen, automatisch speichern, mit Änderungsdatum anzeigen und bei Bedarf löschen.</p></article>
+          <article class="jarvis-feature reveal"><span>06</span><h3>Jarvis</h3><p>Die Verbindung zu Jarvis ist vollständig integriert; der Jarvis-Status ist direkt im Dashboard sichtbar.</p></article>
+        </div>
+
+        <div class="jarvis-details">
+          <article class="architecture-card reveal">
+            <p class="eyebrow">Architektur</p>
+            <h3>Vom Frontend zu lokalen Systemdaten</h3>
+            <div class="architecture-flow">
+              <span>React / TypeScript</span><i>↓</i><span>REST API</span><i>↓</i><span>FastAPI / Python</span><i>↓</i><span>Lokale Systemdaten</span>
+            </div>
+            <div class="architecture-planned"><span>Jarvis</span><i>→</i><span>Lokale API</span><i>→</i><span>Dashboard</span><small>Integriert</small></div>
+          </article>
+          <article class="security-card reveal">
+            <p class="eyebrow">Lokal &amp; sicher</p>
+            <h3>Bewusst begrenzter Zugriff</h3>
+            <p>Das Backend läuft ausschließlich lokal auf <code>127.0.0.1</code>. Das Dashboard darf Systeminformationen nur lesen und keine Prozesse beenden, Dateien löschen oder Systemeinstellungen verändern.</p>
+          </article>
+        </div>
+
+        <div class="jarvis-learning reveal">
+          <div><p class="eyebrow">Was ich dabei gelernt habe</p><h3>Technik verbinden und Zusammenhänge verstehen.</h3></div>
+          <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Frontend &amp; Backend verbinden</li><li>REST APIs</li><li>Systeminformationen</li><li>Datenverwaltung</li><li>Fehlerbehandlung</li><li>Tests</li><li>Saubere Projektstruktur</li><li>Sicherheit</li><li>Codex sinnvoll einsetzen</li></ul>
         </div>
       </div>
     </section>

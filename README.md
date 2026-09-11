@@ -1,49 +1,45 @@
-# Saif Aldien – Portfolio Website
+# Portfolio-Website von Saif Aldien
 
-Meine persönliche Portfolio-Website für meinen Einstieg in den IT-Bereich und die Suche nach einem Ausbildungsplatz.
+Statische, responsive Single-Page-Portfolio-Website für die Suche nach einem Ausbildungsplatz im IT-Bereich. Das Projekt verwendet ausschließlich HTML, CSS und Vanilla JavaScript. Es gibt kein Build-System und keine externen Laufzeitabhängigkeiten.
 
-## Über das Projekt
+## Website lokal öffnen
 
-Die Website ist eine responsive Single-Page-Website, mit der ich meinen aktuellen Lernstand, meine Interessen und meine Projekte präsentiere.
+Die Datei `index.html` per Doppelklick in einem aktuellen Browser öffnen. Die Website funktioniert direkt über das lokale `file://`-Protokoll.
 
-Sie wurde mit folgenden Technologien umgesetzt:
+Alternativ kann für lokale Tests ein einfacher statischer Server genutzt werden. Das ist optional und für die Veröffentlichung nicht notwendig.
 
-- HTML
-- CSS
-- Vanilla JavaScript
+## Inhalte anpassen
 
-Es werden keine Frameworks und kein Build-System benötigt.
+Die wichtigsten Angaben lassen sich an folgenden Stellen anpassen:
 
-## Inhalte
+- `saifaldienabbud@gmail.com`: in `index.html`, `impressum.html` und `datenschutz.html`
+- `https://github.com/Saif-gut`: in `index.html`
+- `YOUR_DOMAIN`: Canonical- und Social-Media-Metadaten im `<head>` von `index.html`
+- `Ausbildungsstart: 2027`: in der Ausbildungs-Section von `index.html`
+- `Deutschland`: Standortangaben in `index.html`
+- `[ADRESSE EINTRAGEN]` und ähnliche markierte Felder: in den rechtlichen Seiten
 
-Die Website enthält unter anderem:
+## Social-Media-Vorschaubild
 
-- Über mich
-- Warum IT?
-- Bot-Projekt
-- Skills & Stärken
-- Mein Lernweg
-- Projekte
-- Ausbildung
-- Kontakt
+Optional eine Datei `assets/images/og-image.jpg` ergänzen. Danach in `index.html` die Platzhalter `https://YOUR_DOMAIN/...` durch die echte HTTPS-Domain ersetzen.
 
-## Aktueller Lernstand
+## Projekte
 
-Ich beschäftige mich aktuell mit:
+### Jarvis Dashboard
 
-- HTML
-- CSS
-- JavaScript
-- Webentwicklung
-- Codex als Entwicklungswerkzeug
+Ich habe ein lokales persönliches IT-Dashboard mit React, TypeScript, Python und FastAPI vollständig umgesetzt.
 
-Zusätzlich arbeite ich an einem eigenen Bot-Projekt, um das Gelernte praktisch anzuwenden.
+Das Projekt zeigt echte lokale Systeminformationen, enthält Funktionen für Aufgaben und Notizen, integriert Wetterdaten und ist mit Jarvis verbunden.
 
-## Bot-Projekt
+Dabei habe ich Frontend und Backend miteinander verbunden, lokale APIs genutzt, Systemdaten verarbeitet und verschiedene Funktionen zu einer vollständigen Anwendung zusammengeführt.
 
-Aktuell entwickle ich Schritt für Schritt einen eigenen Bot.
+**Status: Fertiggestellt**
 
-Dabei lerne ich unter anderem:
+### Bot-Projekt
+
+Ich habe meinen ersten eigenen Bot vollständig entwickelt.
+
+Dabei habe ich unter anderem gelernt:
 
 - Programmierlogik
 - strukturiertes Arbeiten
@@ -51,22 +47,45 @@ Dabei lerne ich unter anderem:
 - Testen und Verbessern
 - den praktischen Einsatz von Codex
 
-Das Projekt befindet sich noch in Entwicklung.
+Das Projekt ist abgeschlossen.
 
-## Projektstruktur
+**Status: Fertiggestellt**
+
+## Rechtliche Seiten
+
+`impressum.html` und `datenschutz.html` enthalten klar markierte Platzhalter. Diese Inhalte vor der Veröffentlichung mit den korrekten persönlichen und Hosting-Angaben ausfüllen und rechtlich prüfen lassen. Es wurden keine Adressdaten erfunden.
+
+## Auf IONOS hochladen
+
+1. Alle Dateien und Ordner aus diesem Projekt in den gewünschten Webspace hochladen.
+2. `index.html` muss im Root-Verzeichnis der Website liegen.
+3. Die Ordnerstruktur (`css`, `js`, `assets`) unverändert beibehalten.
+4. Prüfen, dass bei IONOS die Domain auf dieses Root-Verzeichnis zeigt.
+
+Keine Node.js-Installation, kein Build und keine Datenbank sind erforderlich. Alle Pfade sind relativ und für klassisches IONOS-Webhosting geeignet.
+
+## Dateistruktur
 
 ```text
-saif-portfolio/
-├── assets/
-│   ├── favicon.svg
-│   └── images/
-│       └── bad-segeberg.jpg
+/
+├── index.html
+├── impressum.html
+├── datenschutz.html
 ├── css/
 │   └── style.css
 ├── js/
 │   └── main.js
-├── .gitignore
-├── datenschutz.html
-├── impressum.html
-├── index.html
+├── assets/
+│   ├── favicon.svg
+│   └── images/
+│       └── README.txt
 └── README.md
+```
+
+## Datenschutz und Performance
+
+- Keine Cookies oder Analytics
+- Keine externen Fonts, CDNs oder Icon-Bibliotheken
+- Keine Video- oder Bild-Downloads für das Hauptdesign
+- Inline-SVG-Icons und reine CSS-Grafiken
+- Respektiert `prefers-reduced-motion`
