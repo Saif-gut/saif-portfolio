@@ -22,17 +22,29 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          cat .portfolio-upload/chunk*.txt | tr -d '\r\n' | base64 -d > portfolio-clean.tar.xz
-          xz -t portfolio-clean.tar.xz
-          rm -rf extracted
-          mkdir extracted
-          tar -xJf portfolio-clean.tar.xz -C extracted
-          project_root="$(find extracted -type f -name index.html | head -n 1 | xargs dirname)"
+
+          archive="$RUNNER_TEMP/portfolio-clean.tar.xz"
+          extract_dir="$RUNNER_TEMP/portfolio-extracted"
+
+          cat .portfolio-upload/chunk*.txt | tr -d '\r\n' | base64 -d > "$archive"
+          xz -t "$archive"
+
+          rm -rf "$extract_dir"
+          mkdir -p "$extract_dir"
+          tar -xJf "$archive" -C "$extract_dir"
+
+          project_root="$(find "$extract_dir" -type f -name index.html | head -n 1 | xargs dirname)"
           test -f "$project_root/index.html"
           test -f "$project_root/css/style.css"
-          rsync -a --delete --exclude='.git' --exclude='.github' --exclude='.portfolio-upload' "$project_root"/ ./
-          rm -rf extracted .portfolio-upload
-          rm -f portfolio-clean.tar.xz saif-portfolio-latest-source.zip
+
+          rsync -a --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.portfolio-upload' \
+            "$project_root"/ ./
+
+          rm -rf .portfolio-upload
+          rm -f saif-portfolio-latest-source.zip
           rm -f .github/workflows/publish-sanitized-portfolio.yml
           rmdir .github/workflows 2>/dev/null || true
           rmdir .github 2>/dev/null || true
