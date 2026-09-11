@@ -18,21 +18,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Expand sanitized portfolio source
+      - name: Publish sanitized portfolio
         shell: bash
         run: |
           set -euo pipefail
-          tr -d '\r\n' < saif-portfolio-latest-source.zip | base64 -d > portfolio-source.zip
-          unzip -t portfolio-source.zip
+          cat .portfolio-upload/chunk*.txt | tr -d '\r\n' | base64 -d > portfolio-clean.tar.xz
+          xz -t portfolio-clean.tar.xz
           rm -rf extracted
           mkdir extracted
-          unzip -q portfolio-source.zip -d extracted
+          tar -xJf portfolio-clean.tar.xz -C extracted
           project_root="$(find extracted -type f -name index.html | head -n 1 | xargs dirname)"
           test -f "$project_root/index.html"
           test -f "$project_root/css/style.css"
-          rsync -a --delete --exclude='.git' --exclude='.github' "$project_root"/ ./
-          rm -rf extracted
-          rm -f portfolio-source.zip saif-portfolio-latest-source.zip
+          rsync -a --delete --exclude='.git' --exclude='.github' --exclude='.portfolio-upload' "$project_root"/ ./
+          rm -rf extracted .portfolio-upload
+          rm -f portfolio-clean.tar.xz saif-portfolio-latest-source.zip
           rm -f .github/workflows/publish-sanitized-portfolio.yml
           rmdir .github/workflows 2>/dev/null || true
           rmdir .github 2>/dev/null || true
