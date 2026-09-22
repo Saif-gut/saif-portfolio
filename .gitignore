@@ -4,3 +4,10 @@ assets/lebenslauf-saif-aldien.pdf
 Thumbs.db
 .DS_Store
 .vscode/
+sk-*
+*.secret
+secrets.*
+credentials.*
+*.key
+*.pem
+.idea/

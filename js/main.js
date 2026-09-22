@@ -129,6 +129,26 @@ if ("IntersectionObserver" in window && observedSections.length) {
   observedSections.forEach((section) => spyObserver.observe(section));
 }
 
+// Current project: Last Letter Club
+const projectsGrid = document.querySelector("#projekte .projects-grid");
+if (projectsGrid && !projectsGrid.querySelector('[data-project="last-letter-club"]')) {
+  const gameCard = document.createElement("article");
+  gameCard.className = "project-card reveal";
+  gameCard.dataset.project = "last-letter-club";
+  gameCard.innerHTML = `
+    <div class="project-preview preview--code" aria-hidden="true"><span>3D</span><i></i><i></i><i></i></div>
+    <div class="project-card__body">
+      <span class="badge badge--active">In Entwicklung</span>
+      <h3>Last Letter Club</h3>
+      <p>Aktuell entwickle ich ein 3D-Partyspiel für PC, in dem Spieler durch eine Lobby laufen, sich an einen Tisch setzen und schnelle englische Wortketten spielen. Ich baue das Projekt Schritt für Schritt in Godot auf – von Kamera und Spielersteuerung über Rundenlogik und Wortprüfung bis zum später geplanten Multiplayer.</p>
+      <ul class="tag-list"><li>Godot 4.7.2</li><li>GDScript</li><li>3D</li><li>Game Development</li><li>Prototyping</li></ul>
+    </div>`;
+
+  const firstProject = projectsGrid.querySelector(".project-card");
+  if (firstProject) firstProject.insertAdjacentElement("afterend", gameCard);
+  else projectsGrid.appendChild(gameCard);
+}
+
 // Scroll animations
 const revealItems = document.querySelectorAll(".reveal");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
