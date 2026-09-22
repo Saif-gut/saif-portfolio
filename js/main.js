@@ -42,6 +42,50 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+// Project filters
+const projectImages = [
+  [".project-media--jarvis", "assets/projects/jarvis/cover.webp", "Vorschau eines lokalen Jarvis Dashboards mit Systemstatus und Aufgaben"],
+  [".project-media--bot", "assets/projects/bot/cover.webp", "Technische Vorschau eines Bot-Projekts für Automatisierung und Logik"],
+  [".project-media--last-letter", "assets/projects/last-letter-club/cover.webp", "Atmosphärische Spielszene von Last Letter Club mit virtuellem Wortspiel-Tisch"],
+  [".project-media--bubble", "assets/projects/bubble-pop/cover.webp", "Bunte Bubble-Pop-Spielwelt mit großen Bubbles und Upgrades"],
+  [".project-media--assistant", "assets/projects/ausbildungs-assistent/cover.webp", "Moderne KI-Assistenz-App zur Unterstützung bei der Ausbildungsplatzsuche"],
+  [".project-media--java", "assets/projects/java/cover.webp", "Java-Konsolenanwendung einer Lagerverwaltung als Lernprojekt"],
+  [".project-media--portfolio", "assets/projects/portfolio/cover.webp", "Dark-Theme-Ansicht einer persönlichen Developer-Portfolio-Website"]
+];
+
+projectImages.forEach(([selector, src, alt]) => {
+  const media = document.querySelector(selector);
+  if (!media) return;
+  const image = document.createElement("img");
+  image.className = "project-media__image";
+  image.src = src;
+  image.alt = alt;
+  image.loading = "lazy";
+  image.decoding = "async";
+  image.addEventListener("error", () => image.remove());
+  media.prepend(image);
+});
+
+const projectFilterButtons = Array.from(document.querySelectorAll(".project-filter__button"));
+const projectCards = Array.from(document.querySelectorAll(".project-hub__card"));
+
+projectFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    projectFilterButtons.forEach((item) => {
+      const isActive = item === button;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    projectCards.forEach((card) => {
+      const categories = (card.dataset.category || "").split(" ");
+      card.hidden = filter !== "all" && !categories.includes(filter);
+    });
+  });
+});
+
 // Smooth navigation
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {

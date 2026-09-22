@@ -41,6 +41,7 @@
     <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 4 6.2 3.5 3.5 0 0 0 3 12a3.5 3.5 0 0 0 2 5.5A3 3 0 0 0 10 20V4.5Zm5 0A3 3 0 0 1 20 6.2a3.5 3.5 0 0 1 1 5.8 3.5 3.5 0 0 1-2 5.5A3 3 0 0 1 14 20V4.5ZM10 9H7m7 5h3"/></symbol>
     <symbol id="icon-learn" viewBox="0 0 24 24"><path d="M4 19 19 4m-8 0h8v8"/><path d="M4 5v14h14"/></symbol>
     <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="icon-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="8" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="15" width="7" height="6" rx="1.5"/></symbol>
   </svg>
 
   <aside class="sidebar" aria-label="Seitennavigation">
@@ -53,7 +54,6 @@
         <a class="side-nav__link active" href="#start"><svg><use href="#icon-home"/></svg><span>Start</span></a>
         <a class="side-nav__link" href="#about"><svg><use href="#icon-user"/></svg><span>Über mich</span></a>
         <a class="side-nav__link" href="#warum-it"><svg><use href="#icon-code"/></svg><span>Warum IT?</span></a>
-        <a class="side-nav__link" href="#bot-projekt"><svg><use href="#icon-bot"/></svg><span>Bot-Projekt</span></a>
         <a class="side-nav__link" href="#skills"><svg><use href="#icon-skills"/></svg><span>Skills</span></a>
         <a class="side-nav__link" href="#lernweg"><svg><use href="#icon-route"/></svg><span>Mein Weg</span></a>
         <a class="side-nav__link" href="#projekte"><svg><use href="#icon-folder"/></svg><span>Projekte</span></a>
@@ -76,7 +76,7 @@
     </button>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
       <a href="#start">Start</a><a href="#about">Über mich</a><a href="#warum-it">Warum IT?</a>
-      <a href="#bot-projekt">Bot-Projekt</a><a href="#skills">Skills</a>
+      <a href="#skills">Skills</a><a href="#lernweg">Mein Weg</a>
       <a href="#projekte">Projekte</a><a href="#ausbildung">Ausbildung</a><a href="#kontakt">Kontakt</a>
     </nav>
   </header>
@@ -89,7 +89,7 @@
           <p class="eyebrow"><span class="eyebrow__dot"></span>Hallo, ich bin</p>
           <h1 id="hero-title">Saif <span>Aldien</span></h1>
           <p class="hero__role">Angehender IT-Auszubildender</p>
-          <p class="hero__text">Ich interessiere mich für IT, Softwareentwicklung und digitale Technologien. Besonders spannend finde ich Webentwicklung und Game Development. Ich lerne Schritt für Schritt, entwickle meine Fähigkeiten weiter und suche eine Ausbildung, in der ich mein Interesse an Technologie zum Beruf machen kann.</p>
+          <p class="hero__text">Ich interessiere mich für IT, Softwareentwicklung und digitale Technologien. Nach dem abgeschlossenen Jarvis Dashboard arbeite ich aktuell an meinem ersten eigenen 3D-Spiel, Last Letter Club. Mein Ziel ist eine Ausbildung, in der ich mich fachlich weiterentwickeln und praktische Erfahrung sammeln kann.</p>
           <p class="hero__motto">Lernen. Entwickeln. Zukunft gestalten.</p>
           <div class="button-row">
             <a class="button button--primary" href="#about">Mehr über mich <svg><use href="#icon-arrow"/></svg></a>
@@ -108,9 +108,8 @@
   <span class="code-muted">&lt;</span><span class="code-blue">h1</span><span class="code-muted">&gt;</span>Saif <span class="code-muted">&lt;</span><span class="code-blue">span</span><span class="code-muted">&gt;</span>Aldien<span class="code-muted">&lt;/</span><span class="code-blue">span</span><span class="code-muted">&gt;&lt;/</span><span class="code-blue">h1</span><span class="code-muted">&gt;</span>
   <span class="code-muted">&lt;</span><span class="code-blue">h2</span><span class="code-muted">&gt;</span>Angehender IT-Auszubildender<span class="code-muted">&lt;/</span><span class="code-blue">h2</span><span class="code-muted">&gt;</span>
   <span class="code-muted">&lt;</span><span class="code-blue">p</span><span class="code-muted">&gt;</span>
-    Ich interessiere mich für IT,
-    Softwareentwicklung und digitale
-    Technologien.
+    Abgeschlossen: Jarvis Dashboard.
+    Aktuell: mein erstes 3D-Spiel.
   <span class="code-muted">&lt;/</span><span class="code-blue">p</span><span class="code-muted">&gt;</span>
   <span class="code-muted">&lt;</span><span class="code-blue">p</span> <span class="code-purple">class</span><span class="code-muted">=</span><span class="code-green">"motto"</span><span class="code-muted">&gt;</span>
     Lernen. Entwickeln. Zukunft gestalten.
@@ -162,6 +161,9 @@
             <p class="lead">Technik und Computer interessieren mich schon seit langer Zeit. Besonders spannend finde ich den Moment, wenn man nicht nur ein Programm benutzt, sondern beginnt zu verstehen, wie es im Hintergrund funktioniert.</p>
             <p>Deshalb beschäftige ich mich zunehmend mit Webentwicklung und Programmierung. Ich lerne aktuell die Grundlagen von HTML, CSS und JavaScript und möchte mein Wissen Schritt für Schritt erweitern.</p>
             <p>Zusätzlich lerne ich, Codex sinnvoll als Werkzeug für Entwicklungsaufgaben einzusetzen. Dabei übe ich, Aufgaben präzise zu beschreiben, generierten Code nachzuvollziehen und ihn Schritt für Schritt an meine Anforderungen anzupassen.</p>
+            <p>Das Gelernte habe ich bereits in einem eigenen Bot-Projekt praktisch angewendet und das Projekt vollständig abgeschlossen.</p>
+            <p>Mit dem Jarvis Dashboard habe ich mein bisher umfangreichstes IT-Lernprojekt abgeschlossen. Dabei habe ich ein React-/TypeScript-Frontend mit einem Python-/FastAPI-Backend verbunden, echte Systemdaten verarbeitet und die Anwendung mit Jarvis integriert.</p>
+            <p>Darauf aufbauend entwickle ich mit Last Letter Club mein erstes eigenes 3D-Spiel. Dabei lerne ich, Spielmechaniken, 3D-Umgebungen und Eingabelogik mit Godot und GDScript umzusetzen.</p>
             <p>Mein langfristiges Ziel ist es, praktische Erfahrung zu sammeln, in einem Team zu lernen und mich beruflich im IT-Bereich weiterzuentwickeln.</p>
           </div>
           <div class="quality-grid">
@@ -185,34 +187,45 @@
       </div>
     </section>
 
-    <section class="section" id="bot-projekt" aria-labelledby="bot-title">
+    <template>
       <div class="container">
-        <article class="game-card reveal">
-          <div class="game-card__art" aria-hidden="true">
-            <div class="pixel-grid"></div>
-            <div class="bot-nodes"><i></i><i></i><i></i><i></i></div>
-            <svg><use href="#icon-bot"/></svg><span>BUILD • TEST<br>IMPROVE</span>
-          </div>
-          <div class="game-card__content">
-            <p class="eyebrow">03 / Aktuelles Lernprojekt</p>
-            <h2 id="bot-title">Mein Bot-Projekt</h2>
-            <p class="subtitle">Von einer Idee zu einem eigenen digitalen Helfer.</p>
-            <p>Aktuell beschäftige ich mich mit der Entwicklung eines eigenen Bots. Mein Ziel ist es, einen digitalen Helfer zu entwickeln, der bei verschiedenen Aufgaben unterstützen und wiederkehrende Abläufe vereinfachen kann.</p>
-            <p>Das Projekt befindet sich noch in Entwicklung. Dabei lerne ich Schritt für Schritt, wie man Funktionen plant, Probleme aufteilt, Logik entwickelt und einzelne Bestandteile zu einem funktionierenden System verbindet.</p>
-            <p>Gleichzeitig nutze ich das Projekt, um mehr praktische Erfahrung mit Programmierung und modernen Entwicklungswerkzeugen wie Codex zu sammeln.</p>
-            <p class="honesty-note"><svg><use href="#icon-check"/></svg><span><strong>Aktueller Status:</strong> Der Bot befindet sich aktuell in Entwicklung. Ich erweitere ihn Schritt für Schritt und nutze das Projekt gleichzeitig, um mein Wissen praktisch anzuwenden und neue Dinge zu lernen.</span></p>
-            <div class="learning-targets"><div><h3>Was ich bei diesem Projekt lerne</h3><span>Aktuelles Lernprojekt</span></div>
-              <ul class="tag-list" aria-label="Lernbereiche des Bot-Projekts"><li>Bot Development</li><li>Programming Logic</li><li>Automation</li><li>Problem Solving</li><li>Codex</li><li>Learning Project</li><li>Testing</li><li>Iteration</li></ul>
+        <div class="project-pair">
+          <article class="project-panel reveal">
+            <div class="project-panel__art project-panel__art--bot" aria-hidden="true">
+              <div class="pixel-grid"></div><div class="bot-nodes"><i></i><i></i><i></i><i></i></div><svg><use href="#icon-bot"/></svg><span>BUILD • TEST<br>IMPROVE</span>
             </div>
-          </div>
-        </article>
+            <div class="project-panel__content">
+              <p class="eyebrow">03 / Abgeschlossenes Projekt</p><h2 id="project-pair-title">Mein Bot-Projekt</h2><p class="subtitle">Von einer Idee zu einem eigenen digitalen Helfer.</p>
+              <p>Ich habe meinen ersten eigenen Bot vollständig entwickelt. Ziel des Projekts war es, einen digitalen Helfer zu bauen, der bei verschiedenen Aufgaben unterstützen und wiederkehrende Abläufe vereinfachen kann.</p>
+              <p>Während der Entwicklung habe ich gelernt, Funktionen zu planen, Programmlogik umzusetzen, Probleme Schritt für Schritt zu lösen, verschiedene Bestandteile miteinander zu verbinden und das Ergebnis zu testen und zu verbessern.</p>
+              <p>Das Projekt war für mich eine wichtige praktische Erfahrung, weil ich dabei mein bisheriges Wissen anwenden und gleichzeitig den Umgang mit modernen Entwicklungswerkzeugen wie Codex weiter vertiefen konnte.</p>
+              <p class="honesty-note"><svg><use href="#icon-check"/></svg><span><strong>Projekt abgeschlossen:</strong> Der Bot ist vollständig entwickelt und das Projekt ist abgeschlossen. Es gehört zu meinen ersten größeren praktischen Entwicklungsprojekten.</span></p>
+              <div class="learning-targets"><div><h3>Was ich bei diesem Projekt gelernt habe</h3><span>Praxisprojekt abgeschlossen</span></div><ul class="tag-list" aria-label="Lernbereiche des Bot-Projekts"><li>Bot Development</li><li>Programming Logic</li><li>Automation</li><li>Problem Solving</li><li>Codex</li><li>Praxisprojekt</li><li>Testing</li><li>Iteration</li></ul></div>
+            </div>
+          </article>
+          <article class="project-panel project-panel--jarvis reveal">
+            <div class="project-panel__art project-panel__art--jarvis" aria-hidden="true">
+              <div class="pixel-grid"></div><div class="jarvis-card-preview"><div class="jarvis-card-preview__bar"><i></i><i></i><i></i><b>JARVIS // LOCAL</b></div><div class="jarvis-card-preview__grid"><span><small>CPU</small><strong>24%</strong></span><span><small>RAM</small><strong>48%</strong></span><span><small>Wetter</small><strong>17 °C</strong></span><span><small>Tasks</small><strong>4 offen</strong></span></div><p>Jarvis · Verbunden</p></div><span>UI MOCKUP · KEINE LIVE-WERTE</span>
+            </div>
+            <div class="project-panel__content">
+              <p class="eyebrow">03 / Neuestes abgeschlossenes Projekt</p><h2>Jarvis Dashboard</h2><p class="subtitle">Ein lokales persönliches IT-Dashboard für Systemstatus, Aufgaben und mehr.</p>
+              <p>Ich habe das Jarvis Dashboard vollständig umgesetzt. Es ist ein lokales persönliches IT-Dashboard, das als Kontrollzentrum für meinen Computer dient.</p>
+              <p>Das Projekt verbindet ein React- und TypeScript-Frontend mit einem lokalen Python- und FastAPI-Backend und zeigt echte Systeminformationen wie CPU-, RAM- und Speicher-Auslastung an.</p>
+              <p>Zusätzlich enthält das Dashboard Funktionen für Aufgaben, Notizen und Wetterinformationen. Die Jarvis-Verbindung wurde vollständig integriert und ist Teil des fertigen Projekts.</p>
+              <p>Mit diesem Projekt habe ich praktische Erfahrung in Frontend- und Backend-Entwicklung, API-Kommunikation, Systemdaten, lokaler Datenverwaltung, Tests, Architektur und der Verbindung verschiedener Software-Komponenten gesammelt.</p>
+              <p class="honesty-note honesty-note--development"><svg><use href="#icon-check"/></svg><span><strong>Projekt abgeschlossen:</strong> Frontend, Backend, Systemstatus, Aufgaben, Notizen, Wetter und die Jarvis-Verbindung wurden zu einem funktionierenden lokalen IT-Dashboard zusammengeführt.</span></p>
+              <div class="learning-targets"><div><h3>Technologien &amp; Lerninhalte</h3><span>Fertiggestellt</span></div><ul class="tag-list" aria-label="Technologien des Jarvis Dashboards"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>psutil</li><li>Open-Meteo</li><li>Tasks</li><li>Notes</li><li>Testing</li><li>Local App</li><li>Jarvis Integration</li></ul></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
+    </template>
     <section class="section section--tinted" id="skills" aria-labelledby="skills-title">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">04 / Aktueller Stand</p><h2 id="skills-title">Skills &amp; Stärken</h2><p>Eine ehrliche Momentaufnahme – ohne Prozentwerte und Übertreibungen.</p></div>
-        <div class="skills-layout">
+        <div class="section-heading reveal"><p class="eyebrow">03 / Aktueller Stand</p><h2 id="skills-title">Skills &amp; Lernfelder</h2><p>Eine ehrliche Momentaufnahme – mit praktischen Projekten und klaren Lernzielen.</p></div>
+        <template>
           <div class="skills-panel reveal">
             <h3>Technischer Lernstand</h3>
             <div class="skill-list">
@@ -221,7 +234,7 @@
               <div class="skill"><div><strong>JavaScript</strong><span>Lernphase</span></div><div class="level level--2" aria-label="Lernphase: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
               <div class="skill"><div><strong>VS Code</strong><span>Aktive Nutzung</span></div><div class="level level--2" aria-label="Aktive Nutzung: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
               <div class="skill"><div><strong>Webentwicklung</strong><span>Grundlagen</span></div><div class="level level--1" aria-label="Grundlagen: 1 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
-              <div class="skill"><div><strong>Bot Development</strong><span>Aktuelles Lernprojekt</span></div><div class="level level--2" aria-label="Aktuelles Lernprojekt: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
+              <div class="skill"><div><strong>Bot Development</strong><span>Abgeschlossenes Projekt</span></div><div class="level level--2" aria-label="Abgeschlossenes Projekt: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
               <div class="skill"><div><strong>Codex</strong><span>In Einarbeitung</span></div><div class="level level--2" aria-label="In Einarbeitung: 2 von 4 Lernsegmenten"><i></i><i></i><i></i><i></i></div></div>
             </div>
             <p class="panel-note">Diese Übersicht zeigt meinen aktuellen Lernstand und wird mit meinen Fortschritten aktualisiert.</p>
@@ -238,42 +251,176 @@
             </div>
           </div>
         </div>
+        </template>
+        <article class="skill-overview reveal"><div class="skill-overview__intro"><p class="eyebrow">Praxis statt Prozentwerte</p><h3>Mein aktueller Lernstand</h3><p>Ich ordne meine Kenntnisse nach praktischer Anwendung und Lernphase ein – transparent, ohne übertriebene Selbsteinschätzung.</p></div><div class="skill-overview__groups"><section><h4>Web &amp; Frontend</h4><ul class="skill-chip-list"><li>HTML <span>Grundlagen</span></li><li>CSS <span>Grundlagen</span></li><li>JavaScript <span>Aktuell am Lernen</span></li><li>React / TypeScript <span>Im Projekt eingesetzt</span></li><li>Responsive Design <span>Praktisch angewendet</span></li></ul></section><section><h4>Backend &amp; Tools</h4><ul class="skill-chip-list"><li>Python / FastAPI <span>Im Projekt eingesetzt</span></li><li>REST APIs <span>Im Projekt eingesetzt</span></li><li>Git / GitHub <span>Aktive Nutzung</span></li><li>VS Code <span>Aktive Nutzung</span></li><li>Testing <span>Erste Erfahrung</span></li></ul></section><section><h4>Games &amp; Automation</h4><ul class="skill-chip-list"><li>Godot / GDScript <span>Im Projekt eingesetzt</span></li><li>Roblox Studio / Luau <span>In Entwicklung</span></li><li>Java <span>Aktuell am Lernen</span></li><li>KI-Tools / Codex <span>Praktisch angewendet</span></li><li>n8n / Automation <span>Aktuell am Lernen</span></li></ul></section></div></article>
       </div>
     </section>
 
     <section class="section" id="lernweg" aria-labelledby="path-title">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">05 / Fortschritt</p><h2 id="path-title">Mein Lernweg</h2><p>Schritt für Schritt vom Interesse zur praktischen Anwendung.</p></div>
-        <ol class="timeline reveal">
+        <div class="section-heading reveal"><p class="eyebrow">04 / Fortschritt</p><h2 id="path-title">Mein Lernweg</h2><p>Ich lerne nicht nur Theorie – ich versuche, das Gelernte direkt in eigenen Projekten praktisch anzuwenden.</p></div>
+        <template>
           <li><span class="timeline__number">01</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Grundlagen</span><h3>HTML</h3><p>Aufbau und Struktur einfacher Webseiten verstehen.</p></div></li>
           <li><span class="timeline__number">02</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Grundlagen</span><h3>CSS</h3><p>Layouts, Farben, Abstände und visuelle Gestaltung umsetzen.</p></div></li>
           <li><span class="timeline__number">03</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">In Arbeit</span><h3>JavaScript</h3><p>Logik und Interaktivität Schritt für Schritt kennenlernen.</p></div></li>
           <li><span class="timeline__number">04</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Aktuell</span><h3>Eigene Projekte</h3><p>Kleine Projekte umsetzen und das Gelernte praktisch anwenden.</p></div></li>
-          <li><span class="timeline__number">05</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Aktuelles Projekt</span><h3>Bot Development</h3><p>Einen eigenen Bot Schritt für Schritt vollständig entwickeln, Funktionen planen, testen, verbessern und zu einem funktionierenden Projekt verbinden.</p></div></li>
+          <li><span class="timeline__number">05</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Abgeschlossen</span><h3>Bot Development</h3><p>Meinen ersten eigenen Bot vollständig entwickelt, getestet und als praktisches Projekt abgeschlossen.</p></div></li>
+          <li><span class="timeline__number">06</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--complete">Abgeschlossen</span><h3>Jarvis Dashboard</h3><p>Mein bisher umfangreichstes IT-Lernprojekt vollständig umgesetzt: React und TypeScript im Frontend mit Python und FastAPI im Backend verbunden, echte Systemdaten integriert und die Anwendung mit Jarvis verknüpft.</p></div></li>
+          <li><span class="timeline__number">07</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">In Entwicklung</span><h3>Game Development – Last Letter Club</h3><p>Mein erstes eigenes 3D-Spiel: Ich entwickle Spielablauf, 3D-Umgebung und Worteingabe mit Godot und GDScript weiter.</p></div></li>
+        </template>
+        <ol class="timeline timeline--ten reveal">
+          <li><span class="timeline__number">01</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Grundlagen</span><h3>HTML &amp; CSS</h3><p>Struktur, Layout und Gestaltung von Webseiten lernen.</p></div></li>
+          <li><span class="timeline__number">02</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Grundlagen</span><h3>JavaScript</h3><p>Interaktivität und Programmlogik Schritt für Schritt vertiefen.</p></div></li>
+          <li><span class="timeline__number">03</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--complete">Abgeschlossen</span><h3>Bot-Projekt</h3><p>Erstes eigenes Praxisprojekt mit Logik, Testing und Iteration.</p></div></li>
+          <li><span class="timeline__number">04</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--complete">Fertiggestellt</span><h3>Jarvis Dashboard</h3><p>Frontend, Backend und lokale Systemdaten verbunden.</p></div></li>
+          <li><span class="timeline__number">05</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">In Entwicklung</span><h3>Last Letter Club</h3><p>Eigene 3D-Spielidee mit Godot und GDScript weiterentwickeln.</p></div></li>
+          <li><span class="timeline__number">06</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">In Entwicklung</span><h3>Bubble Pop Game</h3><p>Gameplay, Progression und Game Design in Roblox erkunden.</p></div></li>
+          <li><span class="timeline__number">07</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">In Entwicklung</span><h3>KI-Ausbildungs-Assistent</h3><p>Ein größeres App-/Web-Projekt für Ausbildungssuchende planen.</p></div></li>
+          <li><span class="timeline__number">08</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Lernprojekt</span><h3>Java lernen</h3><p>Grundlagen mit einer kleinen Lagerverwaltung praktisch üben.</p></div></li>
+          <li><span class="timeline__number">09</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge">Aktuell am Lernen</span><h3>n8n &amp; Automatisierung</h3><p>KI- und Automatisierungs-Workflows kennenlernen.</p></div></li>
+          <li><span class="timeline__number">10</span><div class="timeline__dot"></div><div class="timeline__card"><span class="badge badge--active">Fortlaufend</span><h3>Weitere eigene Projekte</h3><p>Neues Wissen weiterhin in praktischen Projekten anwenden.</p></div></li>
         </ol>
       </div>
     </section>
 
     <section class="section section--tinted" id="projekte" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-heading reveal"><p class="eyebrow">06 / Learning Lab</p><h2 id="projects-title">Projekte &amp; Learning Lab</h2><p>Hier dokumentiere ich meinen Fortschritt.</p></div>
-        <div class="projects-grid">
-          <article class="project-card project-card--featured reveal">
-            <div class="project-preview preview--bot" aria-hidden="true"><svg><use href="#icon-bot"/></svg><span>IN DEVELOPMENT</span></div>
-            <div class="project-card__body"><span class="badge badge--active">In Entwicklung</span><h3>Eigener Bot</h3><p>Ein eigenes Bot-Projekt, das verschiedene Aufgaben unterstützen und Abläufe vereinfachen soll. Ich entwickle das Projekt Schritt für Schritt und nutze es, um Programmierlogik, strukturiertes Arbeiten und moderne Entwicklungswerkzeuge praktisch zu lernen.</p><ul class="tag-list"><li>Bot Development</li><li>Logic</li><li>Automation</li><li>Codex</li></ul><div class="project-actions"><a class="button button--primary button--small" href="#bot-projekt">Mehr erfahren <svg><use href="#icon-arrow"/></svg></a></div></div>
+        <div class="section-heading reveal"><p class="eyebrow">05 / Projekte</p><h2 id="projects-title">Meine <span>Projekte</span></h2><p>Ideen. Code. Fortschritt. Hier findest du eine Übersicht über meine bisherigen und aktuellen Projekte.</p></div>
+        <template>
+          <article class="project-card project-card--featured project-card--jarvis reveal">
+            <div class="project-preview preview--jarvis" aria-hidden="true">
+              <div class="preview-dashboard">
+                <span class="preview-dashboard__bar"><i></i><i></i><i></i><b>JARVIS // LOCAL</b></span>
+                <span class="preview-dashboard__tile preview-dashboard__tile--wide"><small>System</small><strong>Online</strong></span>
+                <span class="preview-dashboard__tile"><small>CPU</small><strong>24%</strong></span>
+                <span class="preview-dashboard__tile"><small>RAM</small><strong>48%</strong></span>
+              </div>
+              <span class="preview-label">UI MOCKUP</span>
+            </div>
+            <div class="project-card__body"><span class="badge badge--complete">Fertiggestellt</span><h3>Jarvis Dashboard</h3><p>Vollständig umgesetztes lokales IT-Dashboard mit React, TypeScript, Python und FastAPI. Es zeigt echte Systeminformationen, verwaltet Aufgaben und Notizen, integriert Wetterdaten und ist mit Jarvis verbunden.</p><ul class="tag-list"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>System Monitoring</li><li>Jarvis</li><li>Local App</li></ul><div class="project-actions"><a class="button button--primary button--small" href="#projekte">Projekt ansehen <svg><use href="#icon-arrow"/></svg></a></div></div>
+          </article>
+          <article class="project-card project-card--last-letter reveal">
+            <div class="project-preview preview--last-letter" aria-hidden="true">
+              <div class="word-table-preview">
+                <span class="word-table-preview__bar"><i></i><i></i><i></i><b>LAST LETTER CLUB</b></span>
+                <span class="word-table-preview__seat word-table-preview__seat--one">A</span>
+                <span class="word-table-preview__seat word-table-preview__seat--two">T</span>
+                <span class="word-table-preview__seat word-table-preview__seat--three">E</span>
+                <span class="word-table-preview__table"><small>STARTBUCHSTABE</small><strong>L</strong><em>live input</em></span>
+              </div>
+              <span class="preview-label">3D-SPIELPROTOTYP</span>
+            </div>
+            <div class="project-card__body"><span class="badge badge--active">In Entwicklung</span><h3>Last Letter Club</h3><p>Ein 3D-PC-Partyspiel in Godot, in dem Spieler am virtuellen Tisch englische Wortketten bilden. Lobby, Bewegung, Sitzplätze, Kamerawechsel und Live-Worteingabe sind bereits umgesetzt; Runden- und Wortlogik werden weiterentwickelt.</p><ul class="tag-list"><li>Godot 4.7.2</li><li>GDScript</li><li>3D</li><li>Game Development</li><li>Prototyping</li></ul></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-preview preview--bubble-pop" aria-hidden="true">
+              <svg viewBox="0 0 200 140" focusable="false"><circle cx="91" cy="78" r="36"/><circle cx="148" cy="42" r="21"/><circle cx="39" cy="39" r="15"/><path d="M69 76a22 22 0 0 1 22-22M138 40a10 10 0 0 1 10-10M149 94v12m-6-6h12M45 103v10m-5-5h10"/></svg>
+              <span class="preview-label">ROBLOX / LUAU</span>
+            </div>
+            <div class="project-card__body">
+              <span class="badge badge--active">In Entwicklung</span>
+              <h3>Bubble Pop Game</h3>
+              <p>Ein Roblox-Spielprojekt mit einem geplanten Spielprinzip: Spieler laufen über Bubbles, lassen sie platzen und verdienen dabei Spielgeld. Damit sollen sie bessere Schuhe und Pets kaufen sowie neue Bereiche freischalten können. Bessere Ausrüstung soll den Verdienst pro Bubble erhöhen.</p>
+              <p><strong>Geplante Systeme:</strong> Bubble-Popping-Gameplay, Geld-/Währungssystem, Schuh-Upgrades, Pets, freischaltbare Bereiche und Progression durch steigenden Verdienst.</p>
+              <ul class="tag-list"><li>Roblox Studio</li><li>Lua / Luau</li><li>Game Development</li><li>Gameplay Systems</li></ul>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-preview preview--bot" aria-hidden="true"><svg><use href="#icon-bot"/></svg><span>FERTIGGESTELLT</span></div>
+            <div class="project-card__body"><span class="badge badge--complete">Fertiggestellt</span><h3>Mein Bot-Projekt</h3><p>Abgeschlossenes KI-Bot-Projekt, bei dem ich Programmlogik, Problemlösung, Testing und den praktischen Einsatz moderner Entwicklungswerkzeuge angewendet habe.</p><ul class="tag-list"><li>Bot Development</li><li>Logic</li><li>Automation</li><li>Codex</li></ul><div class="project-actions"><a class="button button--secondary button--small" href="#projekte">Mehr erfahren <svg><use href="#icon-arrow"/></svg></a></div></div>
           </article>
           <article class="project-card reveal">
             <div class="project-preview preview--portfolio" aria-hidden="true"><div class="browser-frame"><span></span><i></i><i></i><b>SA</b></div></div>
-            <div class="project-card__body"><span class="badge badge--active">Aktuelles Projekt</span><h3>Portfolio Website</h3><p>Meine persönliche Portfolio-Website, mit der ich meine Interessen, meinen Lernweg und meine Ziele im IT-Bereich präsentiere.</p><ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-actions"><a class="button button--secondary button--small" href="#start">Projekt ansehen <svg><use href="#icon-external"/></svg></a></div></div>
+            <div class="project-card__body"><span class="badge">Eigene Website</span><h3>Portfolio Website</h3><p>Meine persönliche Portfolio-Website, mit der ich meine Interessen, meinen Lernweg und meine Ziele im IT-Bereich präsentiere.</p><ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="project-actions"><a class="button button--secondary button--small" href="#start">Projekt ansehen <svg><use href="#icon-external"/></svg></a></div></div>
           </article>
           <article class="project-card reveal">
             <div class="project-preview preview--code" aria-hidden="true"><span>{ }</span><i></i><i></i><i></i></div>
             <div class="project-card__body"><span class="badge badge--future">Geplant</span><h3>JavaScript Mini Project</h3><p>Ein kleines Projekt, um JavaScript und Programmlogik praktisch zu üben.</p><ul class="tag-list"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
           </article>
         </div>
+        </template>
+        <div class="project-filter reveal" role="toolbar" aria-label="Projektkategorien">
+          <button class="project-filter__button is-active" type="button" data-filter="all" aria-pressed="true">Alle</button><button class="project-filter__button" type="button" data-filter="web" aria-pressed="false">Web</button><button class="project-filter__button" type="button" data-filter="apps" aria-pressed="false">Apps</button><button class="project-filter__button" type="button" data-filter="games" aria-pressed="false">Games</button><button class="project-filter__button" type="button" data-filter="tools" aria-pressed="false">Tools</button><button class="project-filter__button" type="button" data-filter="ai" aria-pressed="false">KI / Automation</button><button class="project-filter__button" type="button" data-filter="learning" aria-pressed="false">Lernprojekte</button>
+        </div>
+        <div class="project-hub" aria-live="polite">
+          <article class="project-card project-hub__card reveal" data-category="apps tools"><div class="project-media project-media--jarvis" aria-label="Platzhalter für ein späteres Jarvis-Dashboard-Projektbild" role="img"><span class="project-media__label">JARVIS / LOCAL</span><div class="project-media__screen"><i></i><i></i><i></i><b>CPU&nbsp; 24%</b><b>RAM&nbsp; 48%</b><strong>ONLINE</strong></div></div><div class="project-card__body"><span class="badge badge--complete">Fertiggestellt</span><h3>Jarvis Dashboard</h3><p class="project-card__subtitle">Mein lokales persönliches IT-Dashboard</p><p>React-/TypeScript-Frontend und lokales Python-/FastAPI-Backend verbinden Systemdaten, Aufgaben, Notizen, Wetter und Jarvis-Integration.</p><ul class="tag-list"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>REST APIs</li><li>Testing</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Praktisch eingesetzt: Frontend-/Backend-Kommunikation, System Monitoring und lokale Datenverarbeitung.</p></details></div></article>
+          <article class="project-card project-hub__card reveal" data-category="tools ai"><div class="project-media project-media--bot" aria-label="Platzhalter für ein späteres Bot-Projektbild" role="img"><span class="project-media__label">BOT / BUILD · TEST</span><svg><use href="#icon-bot"/></svg><b>FERTIGGESTELLT</b></div><div class="project-card__body"><span class="badge badge--complete">Fertiggestellt</span><h3>Mein Bot-Projekt</h3><p class="project-card__subtitle">Mein erster eigener digitaler Helfer</p><p>Ein abgeschlossenes Praxisprojekt, in dem ich Programmlogik, strukturiertes Arbeiten, Testing und Iteration angewendet habe.</p><ul class="tag-list"><li>Bot Development</li><li>Programmlogik</li><li>Automation</li><li>Testing</li><li>Codex</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Das Projekt ist bewusst als eines meiner ersten größeren, abgeschlossenen Praxisprojekte eingeordnet – ohne zusätzliche Behauptungen über nicht dokumentierte Funktionen.</p></details></div></article>
+          <article class="project-card project-hub__card reveal" data-category="games"><div class="project-media project-media--last-letter" aria-label="Platzhalter für ein späteres Last-Letter-Club-Projektbild" role="img"><span class="project-media__label">LAST LETTER CLUB</span><div class="project-media__table"><b>L</b><small>WORD CHAIN</small></div></div><div class="project-card__body"><span class="badge badge--active">In Entwicklung</span><h3>Last Letter Club</h3><p class="project-card__subtitle">3D-Wortspiel für Freunde</p><p>Ein 3D-PC-Partyspiel in Godot: Spieler bilden an virtuellen Tischen englische Wortketten. Das Projekt wird aktiv weiterentwickelt.</p><ul class="tag-list"><li>Godot 4.7.2</li><li>GDScript</li><li>3D</li><li>Multiplayer</li><li>Game Logic</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Aufgebaut sind unter anderem Lobby, Bewegung, virtuelle Tische, Wortprüfung, Timer, Leben, Gewinnerlogik sowie Host/Join- und Netzwerk-Grundlagen. Eine vollständige öffentliche Internet-Erprobung wird nicht behauptet.</p></details></div></article>
+          <article class="project-card project-hub__card reveal" data-category="games"><div class="project-media project-media--bubble" aria-label="Platzhalter für ein späteres Bubble-Pop-Game-Projektbild" role="img"><span class="project-media__label">BUBBLE POP</span><i></i><i></i><i></i><b>+</b></div><div class="project-card__body"><span class="badge badge--active">Prototyp / in Entwicklung</span><h3>Bubble Pop Game</h3><p class="project-card__subtitle">Roblox-Spielprojekt</p><p>Spieler lassen Bubbles platzen, verdienen Spielgeld und sollen damit Ausrüstung, Pets, neue Bereiche und Upgrades freischalten.</p><ul class="tag-list"><li>Roblox Studio</li><li>Lua / Luau</li><li>Gameplay</li><li>Game Design</li><li>Progression</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Das Spiel ist bewusst als Projekt in Entwicklung dargestellt. Bessere Ausrüstung soll den Verdienst pro Bubble erhöhen.</p></details></div></article>
+          <article class="project-card project-hub__card reveal" data-category="apps ai"><div class="project-media project-media--assistant" aria-label="Platzhalter für ein späteres KI-Ausbildungs-Assistent-Projektbild" role="img"><span class="project-media__label">KI-ASSISTENT</span><div class="project-media__assistant-lines"><i></i><i></i><i></i></div></div><div class="project-card__body"><span class="badge badge--active">In Entwicklung</span><h3>KI-Ausbildungs-Assistent</h3><p class="project-card__subtitle">App-/Web-Projekt für Ausbildungssuchende</p><p>Ein größeres Projekt rund um die Unterstützung bei der Ausbildungsplatzsuche und beim strukturierten Vorbereiten von Bewerbungsprozessen.</p><ul class="tag-list"><li>React Native</li><li>TypeScript</li><li>Supabase</li><li>KI-Tools</li><li>n8n</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Ausbildungsplatzsuche, Profilanalyse, Anschreiben und Interviewtraining sind geplante beziehungsweise in Entwicklung befindliche Bereiche. n8n lerne ich für KI- und Automatisierungs-Workflows.</p></details></div></article>
+          <article class="project-card project-hub__card reveal" data-category="learning tools"><div class="project-media project-media--java" aria-label="Platzhalter für ein späteres Java-Lernprojekt-Projektbild" role="img"><span class="project-media__label">JAVA / KONSOLE</span><pre>1  Artikel hinzufügen · 2  Bestand anzeigen · 3  Beenden</pre></div><div class="project-card__body"><span class="badge">Lernprojekt / in Entwicklung</span><h3>Java Lernprojekt: Lagerverwaltung</h3><p class="project-card__subtitle">Grundlagen praktisch üben</p><p>Meine erste Java-Konsolenanwendung für eine kleine Lagerverwaltung – bewusst als Lernprojekt angelegt.</p><ul class="tag-list"><li>Java</li><li>Konsole</li><li>Programmlogik</li><li>Benutzereingaben</li><li>OOP</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Ich übe Java-Grundlagen, Variablen, Bedingungen und Menüs. Klassen, Objekte und Datenstrukturen sind die nächsten Lernschritte.</p></details></div></article>
+          <article class="project-card project-hub__card reveal" data-category="web"><div class="project-media project-media--portfolio" aria-label="Platzhalter für ein späteres Portfolio-Website-Projektbild" role="img"><span class="project-media__label">SA / PORTFOLIO</span><strong>Code<br>Ideen<br>Fortschritt</strong></div><div class="project-card__body"><span class="badge badge--complete">Aktiv verbessert</span><h3>Portfolio Website</h3><p class="project-card__subtitle">Meine persönliche Website</p><p>Hier dokumentiere ich Projekte, Lernweg und technische Kenntnisse auf meinem Weg Richtung IT-Ausbildung.</p><ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li><li>UI/UX</li></ul><details class="project-details"><summary>Details ansehen <svg><use href="#icon-arrow"/></svg></summary><p>Die Website wird laufend erweitert und verbessert. GitHub wird als Profil verlinkt; ein eigenes Repository ist in dieser Website nicht hinterlegt.</p></details></div></article>
+        </div>
+        <p class="project-repository-links reveal">Quellcode: <a href="https://github.com/Saif-gut/jarvis-dashboard" target="_blank" rel="noopener noreferrer">Jarvis Dashboard</a> · <a href="https://github.com/Saif-gut/Jarvis-assistant" target="_blank" rel="noopener noreferrer">Jarvis Assistant</a> · <a href="https://github.com/Saif-gut/last-letter-club" target="_blank" rel="noopener noreferrer">Last Letter Club</a> · <a href="https://github.com/Saif-gut/bubble-pop-game" target="_blank" rel="noopener noreferrer">Bubble Pop Game</a> · <a href="https://github.com/Saif-gut/ki-ausbildungs-assistent" target="_blank" rel="noopener noreferrer">KI-Ausbildungs-Assistent</a> · <a href="https://github.com/Saif-gut/java-lagerverwaltung" target="_blank" rel="noopener noreferrer">Java-Lagerverwaltung</a> · <a href="https://github.com/Saif-gut/saif-portfolio" target="_blank" rel="noopener noreferrer">Portfolio</a></p>
       </div>
     </section>
 
+    <template>
+      <div class="container">
+        <div class="jarvis-intro">
+          <div class="jarvis-copy reveal">
+            <p class="eyebrow">Abgeschlossenes Full-Stack-Lernprojekt</p>
+            <span class="badge badge--complete">Fertiggestellt</span>
+            <h2 id="jarvis-title">Jarvis Dashboard</h2>
+            <p class="subtitle">Ein lokales persönliches Kontrollzentrum für meinen Computer.</p>
+            <p>Ich habe das Jarvis Dashboard als lokale Web-App vollständig umgesetzt. Ein modernes React-/TypeScript-Frontend kommuniziert mit einem Python-/FastAPI-Backend und stellt echte lokale Systeminformationen wie CPU-, RAM- und Speicher-Auslastung dar.</p>
+            <p>Das Dashboard enthält Aufgaben, Notizen und Wetterinformationen für Trappenkamp. Es ist mit meinem Assistenten Jarvis verbunden und bildet mit ihm ein lokales persönliches System.</p>
+            <ul class="tag-list jarvis-tech"><li>React</li><li>TypeScript</li><li>Vite</li><li>CSS</li><li>Python</li><li>FastAPI</li><li>psutil</li><li>Lokale Datenverwaltung</li><li>Open-Meteo</li><li>Testing</li><li>Local App</li><li>Jarvis Integration</li></ul>
+          </div>
+
+          <figure class="jarvis-mockup reveal" aria-labelledby="mockup-caption">
+            <figcaption id="mockup-caption"><span>Dashboard-Vorschau</span><small>UI-Mockup · keine Live-Werte</small></figcaption>
+            <div class="mockup-window">
+              <div class="mockup-window__bar"><span></span><span></span><span></span><b>JARVIS DASHBOARD</b><i>LOCAL</i></div>
+              <div class="mockup-grid">
+                <article class="mockup-card mockup-card--chart"><div><small>Systemstatus</small><strong>CPU <span>24%</span></strong></div><div class="mock-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+                <article class="mockup-card"><small>Arbeitsspeicher</small><strong>48%</strong><span class="mockup-meter"><i></i></span></article>
+                <article class="mockup-card"><small>Wetter · Trappenkamp</small><strong>17 °C</strong><span>Beispielwert</span></article>
+                <article class="mockup-card"><small>Aufgaben</small><strong>4 offen</strong><span>Beispieldaten</span></article>
+                <article class="mockup-card mockup-card--offline"><small>Jarvis Status</small><strong>Verbunden</strong><span>Integration aktiv</span></article>
+              </div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="jarvis-status reveal">
+          <div><span class="badge badge--complete">Fertiggestellt</span><h3>Projekt abgeschlossen</h3></div>
+          <p>Das Jarvis Dashboard ist vollständig umgesetzt. Frontend, Backend, Systemstatus, Aufgaben, Notizen, Wetter und die Jarvis-Verbindung wurden zu einem funktionierenden lokalen IT-Dashboard zusammengeführt.</p>
+        </div>
+
+        <div class="jarvis-features">
+          <article class="jarvis-feature reveal"><span>01</span><h3>Systemstatus</h3><p>Automatisch aktualisierte lokale Daten zu CPU, RAM, Speicher, CPU-Kernen, Betriebssystem und Computername.</p></article>
+          <article class="jarvis-feature reveal"><span>02</span><h3>Verlauf</h3><p>Übersichtliche Diagramme für die Entwicklung der CPU- und RAM-Auslastung.</p></article>
+          <article class="jarvis-feature reveal"><span>03</span><h3>Wetter</h3><p>Open-Meteo-Daten für Trappenkamp mit Temperatur, gefühlter Temperatur, Wind, Regenchance sowie Stunden- und Morgen-Vorschau.</p></article>
+          <article class="jarvis-feature reveal"><span>04</span><h3>Aufgaben</h3><p>Lokale Aufgaben erstellen, bearbeiten, erledigen, löschen und nach Priorität, Fälligkeit oder Status filtern.</p></article>
+          <article class="jarvis-feature reveal"><span>05</span><h3>Notizen</h3><p>Notizen erstellen, bearbeiten, durchsuchen, automatisch speichern, mit Änderungsdatum anzeigen und bei Bedarf löschen.</p></article>
+          <article class="jarvis-feature reveal"><span>06</span><h3>Jarvis</h3><p>Die Verbindung zu Jarvis ist vollständig integriert; der Jarvis-Status ist direkt im Dashboard sichtbar.</p></article>
+        </div>
+
+        <div class="jarvis-details">
+          <article class="architecture-card reveal">
+            <p class="eyebrow">Architektur</p>
+            <h3>Vom Frontend zu lokalen Systemdaten</h3>
+            <div class="architecture-flow">
+              <span>React / TypeScript</span><i>↓</i><span>REST API</span><i>↓</i><span>FastAPI / Python</span><i>↓</i><span>Lokale Systemdaten</span>
+            </div>
+            <div class="architecture-planned"><span>Jarvis</span><i>→</i><span>Lokale API</span><i>→</i><span>Dashboard</span><small>Integriert</small></div>
+          </article>
+          <article class="security-card reveal">
+            <p class="eyebrow">Lokal &amp; sicher</p>
+            <h3>Bewusst begrenzter Zugriff</h3>
+            <p>Das Backend läuft ausschließlich lokal auf <code>127.0.0.1</code>. Das Dashboard darf Systeminformationen nur lesen und keine Prozesse beenden, Dateien löschen oder Systemeinstellungen verändern.</p>
+          </article>
+        </div>
+
+        <div class="jarvis-learning reveal">
+          <div><p class="eyebrow">Was ich dabei gelernt habe</p><h3>Technik verbinden und Zusammenhänge verstehen.</h3></div>
+          <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Frontend &amp; Backend verbinden</li><li>REST APIs</li><li>Systeminformationen</li><li>Datenverwaltung</li><li>Fehlerbehandlung</li><li>Tests</li><li>Saubere Projektstruktur</li><li>Sicherheit</li><li>Codex sinnvoll einsetzen</li></ul>
+        </div>
+      </div>
+    </section>
+
+    </template>
     <section class="section experience" id="erfahrung" aria-labelledby="experience-title">
       <div class="container">
         <div class="experience-card reveal">
