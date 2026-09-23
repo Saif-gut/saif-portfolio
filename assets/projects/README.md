@@ -1,6 +1,6 @@
 # Projektbilder
 
-Lege hier später die finalen Projektbilder ab. Die Portfolio-Cards verwenden aktuell bewusst beschriftete CSS-Platzhalter, damit keine leeren oder kaputten Bilder angezeigt werden.
+Die Projektkarten verwenden eigene CSS-Illustrationen. Sie stellen Themen der Projekte dar, keine Screenshots oder Live-Daten. Es werden keine Bilddateien automatisch nachgeladen. Echte Projektbilder können hier später abgelegt und in der jeweiligen Karte in `index.html` eingebunden werden.
 
 Vorgesehene Ordner:
 

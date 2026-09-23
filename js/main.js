@@ -1,8 +1,6 @@
 "use strict";
 
 document.documentElement.classList.add("js-enabled");
-
-// Mobile menu
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
@@ -20,156 +18,90 @@ if (menuToggle && mobileMenu) {
     menuToggle.setAttribute("aria-label", willOpen ? "Menü schließen" : "Menü öffnen");
     mobileMenu.classList.toggle("is-open", willOpen);
   });
-
-  mobileMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMobileMenu);
-  });
-
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
       closeMobileMenu();
       menuToggle.focus();
     }
   });
-
   document.addEventListener("click", (event) => {
-    if (!mobileMenu.classList.contains("is-open")) return;
     if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) closeMobileMenu();
   });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 960) closeMobileMenu();
+  window.matchMedia("(min-width: 961px)").addEventListener("change", (event) => {
+    if (event.matches) closeMobileMenu();
   });
 }
 
-// Project filters
-const projectImages = [
-  [".project-media--jarvis", "assets/projects/jarvis/cover.webp", "Vorschau eines lokalen Jarvis Dashboards mit Systemstatus und Aufgaben"],
-  [".project-media--bot", "assets/projects/bot/cover.webp", "Technische Vorschau eines Bot-Projekts für Automatisierung und Logik"],
-  [".project-media--last-letter", "assets/projects/last-letter-club/cover.webp", "Atmosphärische Spielszene von Last Letter Club mit virtuellem Wortspiel-Tisch"],
-  [".project-media--bubble", "assets/projects/bubble-pop/cover.webp", "Bunte Bubble-Pop-Spielwelt mit großen Bubbles und Upgrades"],
-  [".project-media--assistant", "assets/projects/ausbildungs-assistent/cover.webp", "Moderne KI-Assistenz-App zur Unterstützung bei der Ausbildungsplatzsuche"],
-  [".project-media--java", "assets/projects/java/cover.webp", "Java-Konsolenanwendung einer Lagerverwaltung als Lernprojekt"],
-  [".project-media--portfolio", "assets/projects/portfolio/cover.webp", "Dark-Theme-Ansicht einer persönlichen Developer-Portfolio-Website"]
-];
-
-projectImages.forEach(([selector, src, alt]) => {
-  const media = document.querySelector(selector);
-  if (!media) return;
-  const image = document.createElement("img");
-  image.className = "project-media__image";
-  image.src = src;
-  image.alt = alt;
-  image.loading = "lazy";
-  image.decoding = "async";
-  image.addEventListener("error", () => image.remove());
-  media.prepend(image);
+// Native anchors preserve browser history and work without JavaScript.
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    const target = document.getElementById(link.getAttribute("href").slice(1));
+    if (!target) return;
+    if (mobileMenu?.contains(link)) closeMobileMenu();
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+    target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+  });
 });
 
-const projectFilterButtons = Array.from(document.querySelectorAll(".project-filter__button"));
+const filterGroup = document.querySelector(".project-filter");
+const filterButtons = Array.from(document.querySelectorAll(".project-filter__button"));
 const projectCards = Array.from(document.querySelectorAll(".project-hub__card"));
+const projectCount = document.querySelector("#project-count");
+if (filterGroup) filterGroup.hidden = false;
 
-projectFilterButtons.forEach((button) => {
+filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
-
-    projectFilterButtons.forEach((item) => {
-      const isActive = item === button;
-      item.classList.toggle("is-active", isActive);
-      item.setAttribute("aria-pressed", String(isActive));
+    filterButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", String(active));
     });
-
+    let visibleCount = 0;
     projectCards.forEach((card) => {
-      const categories = (card.dataset.category || "").split(" ");
-      card.hidden = filter !== "all" && !categories.includes(filter);
+      card.hidden = filter !== "all" && !card.dataset.category.split(" ").includes(filter);
+      if (!card.hidden) visibleCount++;
     });
+    if (projectCount) projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? "Projekt" : "Projekte"} angezeigt.`;
   });
 });
 
-// Smooth navigation
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    const targetId = link.getAttribute("href");
-    if (!targetId || targetId === "#") return;
-    const target = document.querySelector(targetId);
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
-      block: "start"
-    });
-    if (history.pushState) history.pushState(null, "", targetId);
-  });
-});
-
-// Scroll spy
+// Section starts keep long sections active while scrolling through them.
 const navigationLinks = Array.from(document.querySelectorAll('.side-nav a[href^="#"], .mobile-menu a[href^="#"]'));
-const navigationTargets = new Set(navigationLinks.map((link) => link.getAttribute("href")));
-const observedSections = Array.from(document.querySelectorAll("main section[id]")).filter((section) => navigationTargets.has(`#${section.id}`));
+const sectionIds = [...new Set(navigationLinks.map((link) => link.hash.slice(1)))];
+const navigationSections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+let scrollQueued = false;
+let currentSection = "";
 
-function setActiveNavigation(id) {
+function updateNavigation() {
+  scrollQueued = false;
+  const offset = window.innerWidth <= 960 ? 130 : 100;
+  let active = navigationSections[0]?.id;
+  navigationSections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= offset) active = section.id;
+  });
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) active = navigationSections.at(-1)?.id;
+  if (active === currentSection) return;
+  currentSection = active;
   navigationLinks.forEach((link) => {
-    const active = link.getAttribute("href") === `#${id}`;
-    link.classList.toggle("active", active);
-    if (active) link.setAttribute("aria-current", "location");
+    const isActive = link.hash === `#${active}`;
+    link.classList.toggle("active", isActive);
+    if (isActive) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   });
 }
 
-if ("IntersectionObserver" in window && observedSections.length) {
-  const sectionVisibility = new Map();
-  const spyObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => sectionVisibility.set(entry.target.id, entry.intersectionRatio));
-    const mostVisible = [...sectionVisibility.entries()].sort((a, b) => b[1] - a[1])[0];
-    if (mostVisible && mostVisible[1] > 0) setActiveNavigation(mostVisible[0]);
-  }, {
-    rootMargin: "-20% 0px -58% 0px",
-    threshold: [0, .05, .15, .3, .5, .75]
-  });
-  observedSections.forEach((section) => spyObserver.observe(section));
+function queueNavigationUpdate() {
+  if (scrollQueued) return;
+  scrollQueued = true;
+  requestAnimationFrame(updateNavigation);
 }
+window.addEventListener("scroll", queueNavigationUpdate, { passive: true });
+window.addEventListener("resize", queueNavigationUpdate);
+window.addEventListener("load", updateNavigation);
+if ("ResizeObserver" in window) new ResizeObserver(queueNavigationUpdate).observe(document.body);
+updateNavigation();
 
-// Current project: Last Letter Club
-const projectsGrid = document.querySelector("#projekte .projects-grid");
-if (projectsGrid && !projectsGrid.querySelector('[data-project="last-letter-club"]')) {
-  const gameCard = document.createElement("article");
-  gameCard.className = "project-card reveal";
-  gameCard.dataset.project = "last-letter-club";
-  gameCard.innerHTML = `
-    <div class="project-preview preview--code" aria-hidden="true"><span>3D</span><i></i><i></i><i></i></div>
-    <div class="project-card__body">
-      <span class="badge badge--active">In Entwicklung</span>
-      <h3>Last Letter Club</h3>
-      <p>Aktuell entwickle ich ein 3D-Partyspiel für PC, in dem Spieler durch eine Lobby laufen, sich an einen Tisch setzen und schnelle englische Wortketten spielen. Ich baue das Projekt Schritt für Schritt in Godot auf – von Kamera und Spielersteuerung über Rundenlogik und Wortprüfung bis zum später geplanten Multiplayer.</p>
-      <ul class="tag-list"><li>Godot 4.7.2</li><li>GDScript</li><li>3D</li><li>Game Development</li><li>Prototyping</li></ul>
-    </div>`;
-
-  const firstProject = projectsGrid.querySelector(".project-card");
-  if (firstProject) firstProject.insertAdjacentElement("afterend", gameCard);
-  else projectsGrid.appendChild(gameCard);
-}
-
-// Scroll animations
-const revealItems = document.querySelectorAll(".reveal");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-if (reduceMotion || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, { rootMargin: "0px 0px -8%", threshold: .08 });
-
-  revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index % 4, 3) * 45}ms`;
-    revealObserver.observe(item);
-  });
-}
-
-// Current year
 const yearElement = document.querySelector("#current-year");
 if (yearElement) yearElement.textContent = String(new Date().getFullYear());

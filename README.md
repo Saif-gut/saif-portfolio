@@ -14,14 +14,13 @@ Die wichtigsten Angaben lassen sich an folgenden Stellen anpassen:
 
 - `saifaldienabbud@gmail.com`: in `index.html`, `impressum.html` und `datenschutz.html`
 - `https://github.com/Saif-gut`: in `index.html`
-- `YOUR_DOMAIN`: Canonical- und Social-Media-Metadaten im `<head>` von `index.html`
-- `Ausbildungsstart: 2027`: in der Ausbildungs-Section von `index.html`
+- `Ab 2027`: in der Ausbildungs-Section von `index.html`
 - `Deutschland`: Standortangaben in `index.html`
 - `[ADRESSE EINTRAGEN]` und ähnliche markierte Felder: in den rechtlichen Seiten
 
 ## Social-Media-Vorschaubild
 
-Optional eine Datei `assets/images/og-image.jpg` ergänzen. Danach in `index.html` die Platzhalter `https://YOUR_DOMAIN/...` durch die echte HTTPS-Domain ersetzen.
+Titel und Beschreibung stehen im `<head>` von `index.html`. Ein Vorschaubild und eine Canonical-URL können mit der tatsächlichen öffentlichen Domain ergänzt werden. Nicht vorhandene Bilder oder Platzhalter-Domains werden nicht verlinkt.
 
 ## Projekte
 
@@ -35,7 +34,18 @@ Der Bereich „Meine Projekte“ bündelt alle Projekte an einer Stelle, einschl
 - [Java-Lagerverwaltung](https://github.com/Saif-gut/java-lagerverwaltung)
 - [Portfolio Website](https://github.com/Saif-gut/saif-portfolio)
 
-Finale Projektbilder können später in `assets/projects/` ergänzt werden. Die Ordner und Hinweise dazu stehen in [`assets/projects/README.md`](assets/projects/README.md).
+Die Projektkarten verwenden kleine CSS-Illustrationen und verlinken den Quellcode direkt. Echte Screenshots können später ergänzt werden; Hinweise stehen in [`assets/projects/README.md`](assets/projects/README.md). Es werden keine nicht vorhandenen Bilder geladen.
+
+## Gestaltung und Bedienung
+
+- Dark Theme mit warmem Goldakzent und lokalen Systemschriften
+- Großes Code-Fenster, kompakte Abschnitte und ein ruhiger Kenntnisbereich
+- Acht Navigationspunkte; „Ausbildung“ bleibt erhalten, „Jarvis Dashboard“ ist kein Navigationspunkt
+- Projektfilter, aufklappbare Details und Tastaturbedienung
+- Ohne JavaScript bleiben alle Inhalte und die mobile Navigation zugänglich
+- Keine Scroll-Einblendeanimationen; reduzierte Bewegung wird berücksichtigt
+
+Die Darstellung wurde in Edge/Chromium bei 320, 390, 568, 768, 1024, 1440 und 1920 Pixeln Breite geprüft, einschließlich Navigation, Filtern, Projekt-Details und rechtlichen Seiten.
 
 ### Jarvis Dashboard
 
