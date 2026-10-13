@@ -630,8 +630,17 @@ thead th {
 .development-note {
   max-width: 850px;
   margin-top: 30px;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--dark-muted);
+}
+.development-note h4 {
+  color: var(--paper);
+  font-size: 20px;
+  letter-spacing: -.03em;
+  margin-bottom: 12px;
+}
+.development-note p + p {
+  margin-top: 12px;
 }
 .portfolio-note a {
   text-decoration: underline;
@@ -1706,7 +1715,7 @@ thead th {
     font-size: 13px;
   }
   .development-note {
-    font-size: 10px;
+    font-size: 13px;
   }
   .secondary-projects {
     padding-block: 50px 55px;

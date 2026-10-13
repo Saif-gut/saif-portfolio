@@ -16,6 +16,8 @@ Keine weiteren Projekte wurden allein aus Dateinamen abgeleitet. Alle sieben bis
 
 ## Bildherkunft
 
+Die Angabe, dass rund 75 % des Codes von ChatGPT/Codex erstellt wurden, stammt aus Saifs ergänzender Angabe vom 13. Oktober 2026. Sie beschreibt den Anteil der KI-generierten Umsetzung; Konzeption, Anforderungen, Entscheidungen, Tests und Qualitätssicherung werden als seine Rolle benannt.
+
 - `assets/projects/codegarten/dashboard.webp`: neuer Screenshot aus dem vorhandenen lokalen Production-Build von Codegarten, 1440 × 960. Eigener isolierter Gast-Browserkontext ohne persönliches Profil.
 - `assets/projects/codegarten/editor.webp`: echter vorhandener Editor-Test-Screenshot, 1440 × 1594, mit Codeausgabe und progressiven Hinweisen.
 - `assets/projects/last-letter-club/lobby.webp`: echter vorhandener Godot-Lobby-Screenshot, 1600 × 680.
