@@ -1,5 +1,5 @@
-bad-segeberg.jpg ist das lokal eingebundene, KI-generierte Standortmotiv der
-Bad-Segeberg-Section. Die Website benötigt keine externe Bildquelle.
-
-Für Social-Media-Vorschauen kann später eine Datei namens "og-image.jpg"
-hinzugefügt werden. Danach die Platzhalter-Domain in index.html ersetzen.
+﻿Das frühere Standortmotiv ist nicht vorhanden und wird nicht referenziert.
+Die echten Projekt-Screenshots liegen unter assets/projects/.
+Es werden keine externen Bilder oder erfundenen Produktscreenshots geladen.
+Ein Social-Media-Bild ist derzeit nicht verlinkt; OG-Titel, Beschreibung und
+Canonical-URL verwenden die tatsächliche öffentliche Adresse https://abbud.de.

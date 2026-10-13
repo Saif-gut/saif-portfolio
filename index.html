@@ -1,252 +1,884 @@
 <!doctype html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Saif Aldien | IT-Ausbildung &amp; Portfolio</title>
-  <meta name="description" content="Ich bin Saif Aldien und suche eine IT-Ausbildung ab 2027. Hier zeige ich meine Projekte mit Webentwicklung, Python und eigenen Spielen.">
-  <meta name="theme-color" content="#111210">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="Saif Aldien | Mein Weg in die IT">
-  <meta property="og:description" content="Meine Projekte, was ich gerade lerne und mein nächster Schritt: eine IT-Ausbildung ab 2027.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
-  <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-  <svg class="svg-sprite" aria-hidden="true">
-    <symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9Z"/></symbol>
-    <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
-    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3m8-6 4 3-4 3m-2-9-4 12"/></symbol>
-    <symbol id="icon-bot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h.01M16 12h.01M8 16h8"/><circle cx="12" cy="3" r="1"/></symbol>
-    <symbol id="icon-skills" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7V3"/></symbol>
-    <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h3a3 3 0 0 0 3-3v-6a3 3 0 0 1 3-3"/></symbol>
-    <symbol id="icon-folder" viewBox="0 0 24 24"><path d="M3 6a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6Z"/></symbol>
-    <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m-13 5h18m-11 0v2h4v-2"/></symbol>
-    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M15 22v-3.9c.04-1-.35-1.96-1.1-2.6 3.6-.4 7.4-1.8 7.4-8A6.2 6.2 0 0 0 19.7 3a5.8 5.8 0 0 0-.2-4S18.2-1.4 15 1a15.4 15.4 0 0 0-6 0C5.8-1.4 4.5-1 4.5-1a5.8 5.8 0 0 0-.2 4 6.2 6.2 0 0 0-1.6 4.5c0 6.2 3.8 7.6 7.4 8-.74.63-1.13 1.58-1.1 2.6V22"/><path d="M9 19c-3 .9-3-1.5-4.2-2"/></symbol>
-    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
-    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 5h5v5m0-5-9 9"/><path d="M19 14v5H5V5h5"/></symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-    <symbol id="icon-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3 3 0 0 0 4 6.2 3.5 3.5 0 0 0 3 12a3.5 3.5 0 0 0 2 5.5A3 3 0 0 0 10 20V4.5Zm5 0A3 3 0 0 1 20 6.2a3.5 3.5 0 0 1 1 5.8 3.5 3.5 0 0 1-2 5.5A3 3 0 0 1 14 20V4.5ZM10 9H7m7 5h3"/></symbol>
-    <symbol id="icon-learn" viewBox="0 0 24 24"><path d="M4 19 19 4m-8 0h8v8"/><path d="M4 5v14h14"/></symbol>
-    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-  </svg>
-  <aside class="sidebar" aria-label="Seitennavigation">
-    <div class="sidebar__top">
-      <a class="brand" href="#start" aria-label="Zur Startseite">
-        <span class="brand__mark" aria-hidden="true">SA</span>
-        <span><strong>Saif Aldien</strong><small>Mein Weg in die IT</small></span>
-      </a>
-      <nav class="side-nav" aria-label="Hauptnavigation">
-        <a class="side-nav__link active" href="#start"><svg aria-hidden="true"><use href="#icon-home"/></svg><span>Start</span></a>
-        <a class="side-nav__link" href="#about"><svg aria-hidden="true"><use href="#icon-user"/></svg><span>Über mich</span></a>
-        <a class="side-nav__link" href="#warum-it"><svg aria-hidden="true"><use href="#icon-code"/></svg><span>Warum IT?</span></a>
-        <a class="side-nav__link" href="#skills"><svg aria-hidden="true"><use href="#icon-skills"/></svg><span>Kenntnisse</span></a>
-        <a class="side-nav__link" href="#lernweg"><svg aria-hidden="true"><use href="#icon-route"/></svg><span>Mein Weg</span></a>
-        <a class="side-nav__link" href="#projekte"><svg aria-hidden="true"><use href="#icon-folder"/></svg><span>Projekte</span></a>
-        <a class="side-nav__link" href="#ausbildung"><svg aria-hidden="true"><use href="#icon-briefcase"/></svg><span>Ausbildung</span></a>
-        <a class="side-nav__link" href="#kontakt"><svg aria-hidden="true"><use href="#icon-mail"/></svg><span>Kontakt</span></a>
-      </nav>
-    </div>
-    <div class="sidebar__footer">
-      <p class="sidebar-note">Portfolio <span>/ 2026</span></p>
-      <div class="social-links" aria-label="Social-Media-Links">
-        <a class="icon-link" href="https://github.com/Saif-gut" target="_blank" rel="noopener noreferrer" title="GitHub-Profil öffnen"><svg aria-hidden="true"><use href="#icon-github"/></svg><span class="sr-only">GitHub-Profil von Saif Aldien öffnen</span></a>
-        <a class="icon-link" href="mailto:saifaldienabbud@gmail.com" title="E-Mail senden"><svg aria-hidden="true"><use href="#icon-mail"/></svg><span class="sr-only">E-Mail an Saif Aldien senden</span></a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saif Aldien · Software bauen. Weiterkommen.</title>
+    <meta
+      name="description"
+      content="Saif Aldien: eigene Softwareprojekte, Codegarten und mein Weg zur Ausbildung als Fachinformatiker für Anwendungsentwicklung ab 2027."
+    />
+    <meta name="theme-color" content="#f3f1e9" />
+    <link rel="canonical" href="https://abbud.de/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <meta
+      property="og:title"
+      content="Saif Aldien · Software bauen. Weiterkommen."
+    />
+    <meta
+      property="og:description"
+      content="Von einer Lernplattform bis zum eigenen 3D-Spiel. Meine Projekte und mein nächster Schritt: eine Ausbildung in der Softwareentwicklung."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:url" content="https://abbud.de/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="#start" aria-label="Saif Aldien – zum Start"
+          >saif<span>.</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          hidden
+        >
+          Menü <span aria-hidden="true">＋</span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
+          <a href="#start" aria-current="location">Start</a
+          ><a href="#projekte">Projekte</a><a href="#about">Über mich</a
+          ><a href="#skills">Kenntnisse</a><a href="#lernweg">Mein Weg</a
+          ><a href="#kontakt">Kontakt ↗</a>
+        </nav>
       </div>
-    </div>
-  </aside>
-
-  <header class="mobile-header">
-    <a class="mobile-brand" href="#start" aria-label="Zur Startseite"><span class="brand__mark">SA</span><strong>Saif Aldien</strong></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile Navigation">
-      <a href="#start">Start</a><a href="#about">Über mich</a><a href="#warum-it">Warum IT?</a>
-      <a href="#skills">Kenntnisse</a><a href="#lernweg">Mein Weg</a>
-      <a href="#projekte">Projekte</a><a href="#ausbildung">Ausbildung</a><a href="#kontakt">Kontakt</a>
-    </nav>
-  </header>
-  <main id="main-content" class="page-shell">
-    <section class="hero section" id="start" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero-topline"><span>Persönliches Portfolio</span><a href="#ausbildung"><i></i>Ausbildung gesucht · 2027 <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-        <div class="hero__grid">
-          <div class="hero__content">
-            <p class="eyebrow">Hallo, ich bin</p>
-            <h1 id="hero-title">Saif <br><span>Aldien.</span></h1>
-            <p class="hero__role">Ich möchte in die IT.</p>
-            <p class="hero__text">Ich baue eigene Webprojekte und entwickle gerade mein erstes 3D-Spiel. Vieles lerne ich dabei zum ersten Mal. Hier zeige ich, was schon funktioniert und woran ich noch arbeite.</p>
-            <div class="button-row"><a class="button button--primary" href="#projekte">Meine Projekte <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a><a class="text-link" href="#about">Über mich <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-            <p class="hero__note">Auf der Suche nach einer IT-Ausbildung ab 2027.</p>
-          </div>
-          <figure class="hero-visual" aria-label="Code-Beispiel zu meinem Portfolio">
-            <div class="monitor">
-              <div class="monitor__bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>portfolio / index.html</span><svg aria-hidden="true"><use href="#icon-code"/></svg></div>
-              <div class="editor-tab">index.html <span>HTML</span></div>
-              <pre><code><span class="code-line"><span class="line-number" aria-hidden="true">01</span><span><span class="code-muted">&lt;!-- Mein Weg in die IT --&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">02</span><span><span class="code-blue">&lt;section</span> <span class="code-purple">id</span>=<span class="code-green">"über-mich"</span><span class="code-blue">&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">03</span><span>  <span class="code-blue">&lt;h1&gt;</span>Saif Aldien<span class="code-blue">&lt;/h1&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">04</span><span> </span></span><span class="code-line"><span class="line-number" aria-hidden="true">05</span><span>  <span class="code-blue">&lt;p&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">06</span><span>    Ich lerne, indem ich Dinge baue.</span></span><span class="code-line"><span class="line-number" aria-hidden="true">07</span><span>  <span class="code-blue">&lt;/p&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">08</span><span> </span></span><span class="code-line"><span class="line-number" aria-hidden="true">09</span><span>  <span class="code-muted">&lt;!-- Gerade in Arbeit --&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">10</span><span>  <span class="code-blue">&lt;h2&gt;</span>Last Letter Club<span class="code-blue">&lt;/h2&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">11</span><span>  <span class="code-blue">&lt;p&gt;</span>Mein erstes 3D-Spiel.<span class="code-blue">&lt;/p&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">12</span><span> </span></span><span class="code-line"><span class="line-number" aria-hidden="true">13</span><span>  <span class="code-muted">&lt;!-- Mein nächster Schritt --&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">14</span><span>  <span class="code-blue">&lt;p&gt;</span>Eine IT-Ausbildung ab 2027.<span class="code-blue">&lt;/p&gt;</span></span></span><span class="code-line"><span class="line-number" aria-hidden="true">15</span><span><span class="code-blue">&lt;/section&gt;</span></span></span></code></pre>
-              <div class="editor-status"><span><i></i>Mein Portfolio</span><span>UTF-8 <b>HTML</b></span></div>
-            </div>
-            <figcaption><span>Von der Idee zum eigenen Projekt.</span><a href="#projekte">Was ich bisher gebaut habe <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></figcaption>
-          </figure>
+    </header>
+    <main id="main-content">
+      <section class="hero container" id="start" aria-labelledby="hero-title">
+        <div class="hero-topline">
+          <p class="eyebrow">Saif Aldien / Entwicklerportfolio</p>
+          <a class="availability" href="#ausbildung"
+            ><span aria-hidden="true"></span>Ausbildung gesucht · ab 2027</a
+          >
         </div>
-        <dl class="overview-grid"><div><dt>Mein Ziel</dt><dd>Ausbildung im IT-Bereich</dd></div><div><dt>Gerade in Arbeit</dt><dd>Last Letter Club</dd></div><div><dt>Interessen</dt><dd>Webentwicklung &amp; Games</dd></div><div><dt>Standort</dt><dd>Deutschland</dd></div></dl>
-      </div>
-    </section>
-
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">01 / Über mich</p><h2 id="about-title">Vom Benutzen zum Verstehen.</h2><p>Computer interessieren mich schon lange. Jetzt möchte ich selbst entwickeln.</p></div>
-        <div class="about-grid">
-          <div class="about-copy">
-            <p class="lead">Mich interessiert, wie Programme hinter der Oberfläche funktionieren. Deshalb lerne ich Webentwicklung und Programmierung – und probiere das Gelernte in eigenen Projekten aus.</p>
-            <p>Mit HTML, CSS und JavaScript habe ich angefangen. Später kamen mein Bot und das Jarvis Dashboard dazu. Dort habe ich ein React-Frontend mit einem Python-Backend verbunden. Aktuell arbeite ich mit Godot an meinem ersten 3D-Spiel, Last Letter Club.</p>
-            <p>Ich nutze auch Codex als Unterstützung. Dabei übe ich, Aufgaben genau zu beschreiben, den vorgeschlagenen Code zu verstehen und selbst anzupassen.</p>
-            <p>Ich stehe noch am Anfang. In einer Ausbildung möchte ich von anderen lernen und Erfahrung im Team sammeln.</p>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1 id="hero-title">
+              Software bauen.<br />Dabei
+              <em
+                >weiter<span class="desktop-break">-<br /></span>kommen.</em
+              >
+            </h1>
+            <p class="hero-description">
+              Ich bin Saif. Ich lerne Entwicklung, indem ich eigene Anwendungen
+              und Spiele baue. Mein nächster Schritt: eine Ausbildung zum
+              Fachinformatiker für Anwendungsentwicklung.
+            </p>
+            <div class="button-row">
+              <a class="button" href="#projekte"
+                >Projekte entdecken <span aria-hidden="true">↘</span></a
+              ><a class="text-link" href="#kontakt"
+                >Kontakt aufnehmen <span aria-hidden="true">↗</span></a
+              >
+            </div>
           </div>
-          <aside class="personal-notes" aria-label="Was mir beim Arbeiten wichtig ist">
-            <p class="mini-label">Was mir wichtig ist</p>
-            <div><span>01</span><div><h3>Nachfragen &amp; ausprobieren</h3><p>Ich möchte verstehen, warum etwas funktioniert.</p></div></div>
-            <div><span>02</span><div><h3>Dranbleiben</h3><p>Wenn etwas nicht klappt, suche ich nach dem Fehler.</p></div></div>
-            <div><span>03</span><div><h3>Verlässlich sein</h3><p>Ich nehme meine Aufgaben ernst und möchte Verantwortung übernehmen.</p></div></div>
-            <div><span>04</span><div><h3>Mit anderen arbeiten</h3><p>Meine Erfahrung mit Kunden und Kollegen möchte ich auch in der IT einbringen.</p></div></div>
+          <aside class="hero-feature" aria-label="Mein aktuelles Hauptprojekt">
+            <div class="hero-feature-top">
+              <span class="eyebrow">Aktuell im Fokus</span
+              ><span class="index-number" aria-hidden="true">01</span>
+            </div>
+            <svg class="garden-mark" viewBox="0 0 220 180" aria-hidden="true">
+              <path
+                d="M110 157V76M110 114C65 118 38 99 37 60c42-5 72 14 73 54ZM110 88c-2-43 26-68 73-67 4 40-26 69-73 67Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="m64 82 46 32m45-67-45 41M52 158h116"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+              />
+            </svg>
+            <h2>Codegarten<span aria-hidden="true">↗</span></h2>
+            <p>
+              Vom geführten Lernen zum eigenen Code. Eine kostenlose
+              Lernplattform für PC und Laptop.
+            </p>
+            <div class="hero-feature-bottom">
+              <span>9 Lernbereiche · Version 1.0.1</span
+              ><a href="#codegarten"
+                >Projekt ansehen <span aria-hidden="true">↗</span></a
+              >
+            </div>
           </aside>
         </div>
-      </div>
-    </section>
-
-    <section class="section section--tinted" id="warum-it" aria-labelledby="why-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">02 / Motivation</p><h2 id="why-title">Warum IT?</h2><p>Weil ich gerne herausfinde, wie etwas funktioniert. Und es dann selbst versuche.</p></div>
-        <div class="feature-grid">
-          <article class="feature-card feature-card--build"><div class="feature-card__top"><svg aria-hidden="true"><use href="#icon-code"/></svg><span>01 / Entwicklung</span></div><h3>Etwas Eigenes <br>zum Laufen bringen.</h3><p>Eine Idee zu haben ist das eine. Sie als Webseite oder Spiel vor sich zu sehen, ist für mich der spannendere Teil.</p><div class="build-note" aria-hidden="true"><code>&lt;Idee /&gt;</code><span>→</span><code>&lt;Projekt /&gt;</code></div></article>
-          <article class="feature-card feature-card--solve"><div class="feature-card__top"><svg aria-hidden="true"><use href="#icon-brain"/></svg><span>02 / Probleme lösen</span></div><h3>Warum klappt <br>das noch nicht?</h3><p>Fehler gehören dazu. Ich möchte verstehen, wo es hakt, statt einfach nur weiterzumachen. Eine gefundene Lösung macht dann umso mehr Spaß.</p></article>
-          <article class="feature-card feature-card--learn"><div class="feature-card__top"><svg aria-hidden="true"><use href="#icon-learn"/></svg><span>03 / Ständig lernen</span></div><h3>Es gibt noch <br>viel zu lernen.</h3><p>Webentwicklung, Python, jetzt Godot: Jedes Projekt bringt neue Fragen mit. Genau das gefällt mir an der IT.</p><a href="#lernweg">Mein bisheriger Weg <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></article>
+        <div class="hero-footer">
+          <span>Python / Backend / Web / Games</span
+          ><a href="#projekte"
+            >Eine Auswahl meiner Arbeit <span aria-hidden="true">↓</span></a
+          >
         </div>
-      </div>
-    </section>
-
-    <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">03 / Kenntnisse</p><h2 id="skills-title">Was ich schon ausprobiert habe.</h2><p>Manches kenne ich aus eigenen Projekten, anderes lerne ich gerade erst.</p></div>
-        <p class="skills-note">Ein eingesetztes Werkzeug beherrsche ich noch nicht in allen Details. Hier steht, wie ich bisher damit gearbeitet habe.</p>
-        <div class="skill-overview__groups"><section><h3>Web &amp; Frontend</h3><dl><div><dt>HTML / CSS</dt><dd>Grundlagen</dd></div><div><dt>JavaScript</dt><dd>Lerne ich gerade</dd></div><div><dt>React / TypeScript</dt><dd>Im Projekt eingesetzt</dd></div><div><dt>Responsive Design</dt><dd>Praktisch angewendet</dd></div></dl></section><section><h3>Backend &amp; Werkzeuge</h3><dl><div><dt>Python / FastAPI</dt><dd>Im Projekt eingesetzt</dd></div><div><dt>REST APIs</dt><dd>Im Projekt eingesetzt</dd></div><div><dt>Git / GitHub / VS Code</dt><dd>Nutze ich regelmäßig</dd></div><div><dt>Testing</dt><dd>Erste Erfahrung</dd></div></dl></section><section><h3>Games &amp; Neues</h3><dl><div><dt>Godot / GDScript</dt><dd>Im Projekt eingesetzt</dd></div><div><dt>Roblox Studio / Luau</dt><dd>Projekt in Arbeit</dd></div><div><dt>Java / n8n</dt><dd>Lerne ich gerade</dd></div><div><dt>KI-Tools / Codex</dt><dd>Praktisch angewendet</dd></div></dl></section></div>
-      </div>
-    </section>
-
-    <section class="section" id="lernweg" aria-labelledby="path-title">
-      <div class="container learning-layout">
-        <div class="section-heading"><p class="eyebrow">04 / Mein Weg</p><h2 id="path-title">Lernen, bauen,<br>weiterkommen.</h2><p>So hat es angefangen – und daran arbeite ich heute. Einige Themen laufen bei mir nebeneinander.</p></div>
-        <ol class="timeline"><li><span class="timeline__number">01</span><div><span class="timeline__status">Grundlagen</span><h3>HTML &amp; CSS</h3><p>Webseiten aufbauen und mit Layouts, Farben und Abständen arbeiten.</p></div></li><li><span class="timeline__number">02</span><div><span class="timeline__status">Lerne ich gerade</span><h3>JavaScript</h3><p>Verstehen, wie eine Seite auf Eingaben reagiert und wie Programmlogik funktioniert.</p></div></li><li><span class="timeline__number">03</span><div><span class="timeline__status">Abgeschlossen</span><h3>Jarvis Assistant</h3><p>Meinen ersten Bot entwickeln, testen und verbessern.</p></div></li><li><span class="timeline__number">04</span><div><span class="timeline__status">Abgeschlossen</span><h3>Jarvis Dashboard</h3><p>Frontend, Backend und echte Systemdaten zusammenbringen.</p></div></li><li><span class="timeline__number">05</span><div><span class="timeline__status">In Entwicklung</span><h3>Last Letter Club</h3><p>Meine erste 3D-Spielidee mit Godot und GDScript umsetzen.</p></div></li><li><span class="timeline__number">06</span><div><span class="timeline__status">In Entwicklung</span><h3>Bubble Pop Game</h3><p>Spielmechaniken und Fortschritt in Roblox ausprobieren.</p></div></li><li><span class="timeline__number">07</span><div><span class="timeline__status">In Entwicklung</span><h3>KI-Ausbildungs-Assistent</h3><p>Eine App zur Ausbildungssuche planen und entwickeln.</p></div></li><li><span class="timeline__number">08</span><div><span class="timeline__status">Lernprojekt</span><h3>Java</h3><p>Die Grundlagen mit einer kleinen Lagerverwaltung üben.</p></div></li><li><span class="timeline__number">09</span><div><span class="timeline__status">Lerne ich gerade</span><h3>n8n &amp; Automatisierung</h3><p>Kennenlernen, wie sich Abläufe mit KI und n8n verbinden lassen.</p></div></li><li><span class="timeline__number">10</span><div><span class="timeline__status">Fortlaufend</span><h3>Weiterlernen</h3><p>Das Gelernte in eigenen Projekten ausprobieren und weiter üben.</p></div></li></ol>
-      </div>
-    </section>
-
-    <section class="section section--tinted" id="projekte" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">05 / Projekte</p><h2 id="projects-title">Was aus dem Lernen entsteht.</h2><p>Abgeschlossene Projekte, erste Versuche und Dinge, an denen ich noch sitze.</p></div>
-        <div class="project-filter" role="group" aria-label="Projekte filtern" hidden>
-          <button class="project-filter__button is-active" type="button" data-filter="all" aria-pressed="true">Alle Projekte <span>7</span></button>
-          <button class="project-filter__button" type="button" data-filter="web" aria-pressed="false">Web</button><button class="project-filter__button" type="button" data-filter="apps" aria-pressed="false">Apps</button><button class="project-filter__button" type="button" data-filter="games" aria-pressed="false">Games</button><button class="project-filter__button" type="button" data-filter="tools" aria-pressed="false">Tools</button><button class="project-filter__button" type="button" data-filter="ai" aria-pressed="false">KI &amp; Automation</button><button class="project-filter__button" type="button" data-filter="learning" aria-pressed="false">Lernprojekte</button>
+      </section>
+      <section class="projects" id="projekte" aria-labelledby="projects-title">
+        <div class="container section-heading">
+          <p class="eyebrow">01 / Projekte</p>
+          <h2 id="projects-title">
+            Gebaut, getestet.<br /><span class="muted"
+              >Und weiterentwickelt.</span
+            >
+          </h2>
+          <p>
+            Größere Anwendungen, spielbare Prototypen und kleine Lernprojekte.
+            Jedes davon hat mir andere Fragen gestellt.
+          </p>
         </div>
-        <p class="sr-only" id="project-count" role="status" aria-live="polite"></p>
-        <div class="project-hub">
-          <article class="project-card project-hub__card" data-category="apps tools">
-            <div class="project-media project-media--jarvis" aria-hidden="true"><span class="project-media__label">01 / Lokales IT-Dashboard</span><div class="project-diagram"><span>Systemdaten</span><span>Aufgaben</span><span>Notizen</span><span>Wetter</span></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--complete">Fertig</span>
-              <h3>Jarvis Dashboard</h3><p>Mein bisher größtes abgeschlossenes Lernprojekt. Das Dashboard zeigt Systemdaten und verbindet Aufgaben, Notizen, Wetter und meinen Assistenten Jarvis.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Hier habe ich ein React-Frontend mit einem Python-Backend verbunden und echte lokale Systemdaten verarbeitet.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/jarvis-dashboard" target="_blank" rel="noopener noreferrer" aria-label="Jarvis Dashboard: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
+        <article
+          class="codegarten"
+          id="codegarten"
+          aria-labelledby="codegarten-title"
+        >
+          <div class="container">
+            <div class="project-kicker">
+              <span>Hauptprojekt / Lernplattform</span
+              ><span>Stabile Version 1.0.1 · Desktop-first</span>
+            </div>
+            <div class="featured-intro">
+              <div>
+                <h3 id="codegarten-title">
+                  Codegarten<span class="accent-dot">.</span>
+                </h3>
+                <p class="featured-claim">
+                  Irgendwann ist der Editor leer.<br />Wie kommt man bis dahin?
+                </p>
+              </div>
+              <div class="featured-description">
+                <p>
+                  Eine Aufgabe erkennen ist leichter, als selbst eine Lösung zu
+                  schreiben. Genau diesen Übergang möchte ich mit Codegarten
+                  begleiten.
+                </p>
+                <p>
+                  Die kostenlose Web-App nimmt Hilfen schrittweise zurück: vom
+                  Ergänzen einzelner Zeilen bis zu eigenen Projekten und
+                  selbstständigen Lösungen.
+                </p>
+                <a class="text-link" href="#lernmodell"
+                  >Das Lernmodell ansehen <span aria-hidden="true">↓</span></a
+                >
+              </div>
+            </div>
+            <dl class="project-stats">
+              <div>
+                <dt>Lernbereiche</dt>
+                <dd>9</dd>
+              </div>
+              <div>
+                <dt>Lektionen</dt>
+                <dd>324</dd>
+              </div>
+              <div>
+                <dt>Projekte</dt>
+                <dd>39</dd>
+              </div>
+              <div class="stat-note">
+                <dt>Qualitätssicherung</dt>
+                <dd>
+                  Über 450 automatisierte Tests
+                  <span>plus Browser-, Inhalts- und Production-Prüfungen.</span>
+                </dd>
+              </div>
+            </dl>
+            <div class="project-screens">
+              <figure>
+                <a
+                  href="assets/projects/codegarten/dashboard.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Codegarten-Dashboard in voller Größe öffnen"
+                  ><img
+                    src="assets/projects/codegarten/dashboard.webp"
+                    width="1440"
+                    height="960"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Echtes Codegarten-Dashboard mit Python-Lernpfad, Wissensgarten, Tagesziel und täglichen Aufgaben."
+                /></a>
+                <figcaption>
+                  01 / Lernpfad &amp; Wissensgarten · echter Screenshot
+                </figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="assets/projects/codegarten/editor.webp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Codegarten-Python-Editor in voller Größe öffnen"
+                  ><img
+                    src="assets/projects/codegarten/editor.webp"
+                    width="1440"
+                    height="1594"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Echter Codegarten-Python-Editor mit eigenem Code, ausgeführter Textausgabe und schrittweise angeforderten Hinweisen."
+                /></a>
+                <figcaption>
+                  02 / Python-Editor &amp; Hinweise · echter Screenshot
+                </figcaption>
+              </figure>
+            </div>
+            <figure class="learning-model" id="lernmodell">
+              <figcaption>
+                <span>Das Lernmodell</span
+                ><span>Weniger Hilfen. Mehr selbst lösen.</span>
+              </figcaption>
+              <ol class="learning-steps">
+                <li>
+                  <span>01</span><strong>Verstehen</strong
+                  ><small>Code erkennen</small>
+                </li>
+                <li>
+                  <span>02</span><strong>Ergänzen</strong
+                  ><small>Lücken schließen</small>
+                </li>
+                <li>
+                  <span>03</span><strong>Debuggen</strong
+                  ><small>Fehler finden</small>
+                </li>
+                <li>
+                  <span>04</span><strong>Verändern</strong
+                  ><small>Code anpassen</small>
+                </li>
+                <li>
+                  <span>05</span><strong>Schreiben</strong
+                  ><small>Eigene Lösungen</small>
+                </li>
+                <li>
+                  <span>06</span><strong>Projekte</strong
+                  ><small>Schritte verbinden</small>
+                </li>
+                <li>
+                  <span>07</span><strong>Leerer Editor</strong
+                  ><small>Selbstständig lösen</small>
+                </li>
+              </ol>
+              <p class="model-caption">
+                Schematische Darstellung des Lernwegs: vom geführten Einstieg
+                zur selbstständigen Lösung.
+              </p>
+            </figure>
+            <div class="architecture">
+              <div class="architecture-heading">
+                <p class="eyebrow">Was technisch dahintersteckt</p>
+                <h4>Eine Oberfläche.<br />Mehrere Lernumgebungen.</h4>
+                <p>
+                  Der spannende Teil liegt für mich hinter dem Editor: Wie läuft
+                  fremder Code? Und wie bleibt Fortschritt über Geräte hinweg
+                  erhalten?
+                </p>
+              </div>
+              <dl class="architecture-list">
+                <div>
+                  <dt><span>01</span>Code ausführen und begrenzen</dt>
+                  <dd>
+                    Python läuft über Pyodide isoliert im Browser, JavaScript in
+                    einer isolierten Umgebung. HTML/CSS erhält eine
+                    Live-Vorschau, SQL eine echte SQLite-Übungsdatenbank.
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    <span>02</span>Lokal lernen, Fortschritt synchronisieren
+                  </dt>
+                  <dd>
+                    Gastmodus, lokale Speicherung und optionale Accounts mit
+                    PostgreSQL. Offline-Nutzung, Backups und Migrationen gehören
+                    dazu. Konfliktauflösung und idempotente Verarbeitung
+                    verhindern, dass Sync Fortschritt überschreibt oder XP
+                    doppelt vergibt.
+                  </dd>
+                </div>
+                <div>
+                  <dt><span>03</span>Mehr prüfen als „Aufgabe geschafft“</dt>
+                  <dd>
+                    Mastery und Independent Mastery unterscheiden geführte
+                    Erfolge von selbstständiger Anwendung. Transfer-Aufgaben,
+                    adaptive Wiederholung und Spaced Repetition ergänzen die
+                    Lernpfade. XP und der Wissensgarten begleiten den
+                    Fortschritt.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="project-disclosures">
+              <details>
+                <summary>
+                  Alle neun Kurse und ihr Umfang
+                  <span aria-hidden="true">＋</span>
+                </summary>
+                <div class="course-table">
+                  <table>
+                    <caption>
+                      Kursumfang in Codegarten 1.0.1
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Lernbereich</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Lektionen</th>
+                        <th scope="col">Projekte</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Python</th>
+                        <td>8</td>
+                        <td>53</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">JavaScript</th>
+                        <td>10</td>
+                        <td>55</td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">HTML &amp; CSS</th>
+                        <td>11</td>
+                        <td>47</td>
+                        <td>6</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">SQL</th>
+                        <td>8</td>
+                        <td>31</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Java</th>
+                        <td>9</td>
+                        <td>30</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C#</th>
+                        <td>9</td>
+                        <td>30</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C++</th>
+                        <td>9</td>
+                        <td>30</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Git &amp; GitHub</th>
+                        <td>7</td>
+                        <td>23</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Linux &amp; Terminal</th>
+                        <td>7</td>
+                        <td>25</td>
+                        <td>2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+              <details>
+                <summary>
+                  Ausführungsumgebungen und aktuelle Grenzen
+                  <span aria-hidden="true">＋</span>
+                </summary>
+                <div class="detail-copy">
+                  <p>
+                    Git und Linux laufen als sichere Simulationen: mit Working
+                    Tree, Staging, Commits, Branches und Konflikten bzw. einem
+                    virtuellen Dateisystem. Sie verändern keine echten
+                    Repositories oder Host-Dateien.
+                  </p>
+                  <p>
+                    Java, C# und C++ nutzen derzeit statische Codeprüfung, keine
+                    vollständige Nutzer-Runtime. Python und JavaScript können
+                    nach dem Paketdownload auch offline verwendet werden.
+                    Registrierung, E-Mail-Bestätigung und Passwort-Reset
+                    ergänzen den optionalen Account.
+                  </p>
+                  <p>
+                    Die Version wurde laut Projektstand in Chrome, Edge und
+                    Linux-Firefox sowie mit TypeScript-, Lint-, Inhalts-,
+                    Build-, Release- und Containerprüfungen getestet. Eine
+                    öffentliche Live-Demo ist hier derzeit nicht verlinkt.
+                  </p>
+                </div>
+              </details>
+            </div>
+            <p class="project-stack">
+              <span>Technik</span>React · TypeScript · Vite · Pyodide · SQLite ·
+              PostgreSQL · Docker · PWA
+            </p>
+            <div class="project-reflection">
+              <h4>Was ich dabei gelernt habe</h4>
+              <p>
+                Eine größere Anwendung strukturieren, Lerninhalte als Daten
+                modellieren und Speicherzustände, Sync und Migrationen zusammen
+                denken. Vor allem: Änderungen brauchen überprüfbare
+                Anforderungen und Tests.
+              </p>
+            </div>
+            <p class="development-note">
+              KI/Codex war ein Entwicklungswerkzeug. Produktidee, Anforderungen,
+              Lernsystem, technische Entscheidungen, Tests und
+              Qualitätskontrolle habe ich aktiv gesteuert. Projektstand: Version
+              1.0.1; Angaben aus dem Projektkontext und der lokalen
+              Projektdokumentation.
+            </p>
+          </div>
+        </article>
+        <div class="container secondary-projects">
+          <article
+            class="project-story jarvis-story"
+            aria-labelledby="jarvis-title"
+          >
+            <div class="story-copy">
+              <p class="eyebrow">02 / Lokale Anwendung</p>
+              <h3 id="jarvis-title">Jarvis<br />Dashboard.</h3>
+              <p class="project-status">
+                Lokal umgesetzt · persönliche IT-Zentrale
+              </p>
+              <p>
+                Systemdaten, Aufgaben und Notizen an einem Ort. Ein
+                React-Frontend spricht mit einem Python-Backend; Aufgaben und
+                Notizen bleiben in einer lokalen SQLite-Datenbank.
+              </p>
+              <p>
+                Ich habe dabei gelernt, API-Verträge, Datenhaltung und
+                Oberfläche zusammenzubringen. Eine klar begrenzte Schnittstelle
+                verbindet das Dashboard mit meinem Jarvis-Sprachassistenten.
+              </p>
+              <p class="stack-inline">
+                React · TypeScript · Python · FastAPI · REST APIs · SQLite
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/Saif-gut/jarvis-dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Quellcode auf GitHub <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <figure class="system-diagram">
+              <figcaption>Aufbau des Projekts / schematisch</figcaption>
+              <div class="diagram-node">
+                <span>Oberfläche</span><strong>React + TypeScript</strong>
+              </div>
+              <div class="diagram-connector">
+                REST API <span aria-hidden="true">↓ ↑</span>
+              </div>
+              <div class="diagram-node">
+                <span>Lokales Backend</span><strong>Python + FastAPI</strong>
+              </div>
+              <div class="diagram-branches">
+                <span>Systemdaten<small>nur lesen</small></span
+                ><span>SQLite<small>Aufgaben &amp; Notizen</small></span
+                ><span>Jarvis<small>begrenzte Steuerung</small></span>
+              </div>
+              <p>
+                Persönliche System-, Aufgaben- und Notizdaten bleiben lokal.
+                Wetterdaten werden separat abgerufen.
+              </p>
+            </figure>
+          </article>
+          <article
+            class="project-story game-story"
+            aria-labelledby="game-title"
+          >
+            <figure class="game-image">
+              <a
+                href="assets/projects/last-letter-club/lobby.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Lobby-Screenshot von Last Letter Club in voller Größe öffnen"
+                ><img
+                  src="assets/projects/last-letter-club/lobby.webp"
+                  width="1600"
+                  height="680"
+                  alt="Echter Screenshot aus Last Letter Club: Third-Person-Figur in einer 3D-Lobby mit zwei Spieltischen und Host-/Join-Bedienung."
+                  loading="lazy"
+                  decoding="async"
+              /></a>
+              <figcaption>
+                Echter Screenshot / 3D-Lobby des Prototyps <span>Godot</span>
+              </figcaption>
+            </figure>
+            <div class="story-copy">
+              <p class="eyebrow">03 / Spielbarer 3D-Prototyp</p>
+              <h3 id="game-title">Last Letter Club.</h3>
+              <p>
+                Ein Wortketten-Partyspiel: Der letzte Buchstabe eines Wortes
+                bestimmt den Anfang des nächsten. Dazu kommen Zeitdruck, eine
+                begehbare Lobby und Spieltische.
+              </p>
+              <p>
+                Offline-Hotseat und eine private Client-Server-Lobby sind
+                vorhanden. Das Projekt bleibt ein Prototyp; ein fertiges
+                kommerzielles Online-Spiel ist es noch nicht.
+              </p>
+              <p class="stack-inline">
+                Godot · GDScript · 3D · Client-Server / Networking
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/Saif-gut/last-letter-club"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Quellcode auf GitHub <span aria-hidden="true">↗</span></a
+              >
             </div>
           </article>
-          <article class="project-card project-hub__card" data-category="games">
-            <div class="project-media project-media--last-letter" aria-hidden="true"><span class="project-media__label">02 / Mein erstes 3D-Spiel</span><div class="word-chain"><span>club</span><i>→</i><span><b>b</b>ook</span></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--active">In Entwicklung</span>
-              <h3>Last Letter Club</h3><p>Ein Wortspiel für den PC: An virtuellen Tischen entstehen englische Wortketten. Ich entwickle es mit Godot und GDScript.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>Godot</li><li>GDScript</li><li>3D</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Lobby, Bewegung, Tische, Wortprüfung, Timer und Gewinnerlogik sind umgesetzt. Host/Join und Netzwerk-Grundlagen sind vorhanden; Tests über das öffentliche Internet stehen noch aus.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/last-letter-club" target="_blank" rel="noopener noreferrer" aria-label="Last Letter Club: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
+          <div class="more-projects">
+            <div class="more-projects-heading">
+              <p class="eyebrow">Auch Teil meines Lernwegs</p>
+              <h3>Weitere Arbeiten<span aria-hidden="true">↙</span></h3>
             </div>
-          </article>
-          <article class="project-card project-hub__card" data-category="tools ai">
-            <div class="project-media project-media--bot" aria-hidden="true"><span class="project-media__label">03 / Mein erstes Bot-Projekt</span><div class="bot-illustration"><svg aria-hidden="true"><use href="#icon-bot"/></svg><span>Jarvis<span>Assistant</span></span></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--complete">Fertig</span>
-              <h3>Jarvis Assistant</h3><p>Mein erster eigener digitaler Helfer. Dabei habe ich geübt, Abläufe zu planen, Fehler zu finden und meinen Code zu testen.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>Programmlogik</li><li>Automation</li><li>Codex</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Das Projekt ist abgeschlossen. Ich habe dabei auch gelernt, Aufgaben für Codex genauer zu beschreiben und den erzeugten Code nachzuvollziehen.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/Jarvis-assistant" target="_blank" rel="noopener noreferrer" aria-label="Jarvis Assistant: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
-            </div>
-          </article>
-          <article class="project-card project-hub__card" data-category="games">
-            <div class="project-media project-media--bubble" aria-hidden="true"><span class="project-media__label">04 / Spielprototyp in Roblox</span><div class="bubble-illustration" aria-hidden="true"><i></i><i></i><i></i><span>pop.</span></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--active">In Entwicklung</span>
-              <h3>Bubble Pop Game</h3><p>Bubbles platzen lassen und Spielgeld sammeln: Das ist die Idee hinter meinem Roblox-Spiel. Ausrüstung, Pets und weitere Bereiche sind geplant.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>Roblox Studio</li><li>Lua / Luau</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Mit besserer Ausrüstung soll der Verdienst pro Bubble steigen. An diesem Spielprinzip und der Entwicklung der einzelnen Systeme arbeite ich noch.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/bubble-pop-game" target="_blank" rel="noopener noreferrer" aria-label="Bubble Pop Game: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
-            </div>
-          </article>
-          <article class="project-card project-hub__card" data-category="apps ai">
-            <div class="project-media project-media--assistant" aria-hidden="true"><span class="project-media__label">05 / Hilfe bei der Ausbildungssuche</span><div class="assistant-illustration"><span>Ausbildung</span><span>Bewerbung</span><span>Nächster Schritt ↗</span></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--active">In Entwicklung</span>
-              <h3>KI-Ausbildungs-Assistent</h3><p>Eine App, die bei der Suche nach einer Ausbildung und beim Vorbereiten von Bewerbungen helfen soll. Das Projekt ist noch in Arbeit.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>React Native</li><li>TypeScript</li><li>Supabase</li><li>n8n</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Geplant oder in Arbeit sind die Stellensuche, Profilanalyse, Anschreiben und Interviewtraining. Für die Automatisierung lerne ich gerade n8n.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/ki-ausbildungs-assistent" target="_blank" rel="noopener noreferrer" aria-label="KI-Ausbildungs-Assistent: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
-            </div>
-          </article>
-          <article class="project-card project-hub__card" data-category="learning tools">
-            <div class="project-media project-media--java" aria-hidden="true"><span class="project-media__label">06 / Java in der Konsole lernen</span><div class="console-illustration"><span>lagerverwaltung.java</span><code><b>&gt;</b> Artikel hinzufügen<br><b>&gt;</b> Bestand anzeigen<br><b>_</b></code></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--">Lernprojekt</span>
-              <h3>Java-Lagerverwaltung</h3><p>Eine kleine Lagerverwaltung, mit der ich Java übe. Im Moment geht es um Variablen, Bedingungen, Menüs und Benutzereingaben.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>Java</li><li>Konsole</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Klassen, Objekte und Datenstrukturen sind meine nächsten Lernschritte. Die Anwendung ist noch in Entwicklung.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/java-lagerverwaltung" target="_blank" rel="noopener noreferrer" aria-label="Java-Lagerverwaltung: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
-            </div>
-          </article>
-          <article class="project-card project-hub__card" data-category="web">
-            <div class="project-media project-media--portfolio" aria-hidden="true"><span class="project-media__label">07 / Die Seite, die du gerade ansiehst</span><div class="portfolio-illustration">Saif <em>Aldien.</em><small>Mein Weg in die IT</small></div></div>
-            <div class="project-card__body">
-              <span class="badge badge--">Wird weiterentwickelt</span>
-              <h3>Portfolio Website</h3><p>Hier sammle ich meine Projekte und zeige, was ich gerade lerne. Gleichzeitig übe ich HTML, CSS und JavaScript.</p>
-              <ul class="tag-list" aria-label="Technik und Werkzeuge"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-              <details class="project-details"><summary>Mehr zum Projekt <svg aria-hidden="true"><use href="#icon-arrow"/></svg></summary><p>Ich arbeite immer wieder an den Texten, dem Layout und der Darstellung auf verschiedenen Bildschirmgrößen.</p></details>
-              <a class="project-source" href="https://github.com/Saif-gut/saif-portfolio" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website: Quellcode auf GitHub (neuer Tab)">Quellcode auf GitHub <svg aria-hidden="true"><use href="#icon-external"/></svg></a>
-            </div>
-          </article>
+            <article class="project-row">
+              <span class="row-number">04</span>
+              <div>
+                <h4>Jarvis Assistant</h4>
+                <p>
+                  Windows-Sprachassistent mit lokaler Erkennung über Vosk und
+                  Whisper. Ollama verarbeitet freie Fragen lokal; einzelne
+                  Funktionen wie Webrecherche und die Online-Stimme benötigen
+                  Internet.
+                </p>
+                <span class="stack-inline"
+                  >Python · Vosk · Whisper · Ollama</span
+                >
+              </div>
+              <div class="row-meta">
+                <span>Lokales Tool</span
+                ><a
+                  href="https://github.com/Saif-gut/Jarvis-assistant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Jarvis Assistant: Quellcode auf GitHub"
+                  >GitHub ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-row">
+              <span class="row-number">05</span>
+              <div>
+                <h4>KI-Ausbildungs-Assistent</h4>
+                <p>
+                  AusbildungsKompass: klickbares Expo-MVP mit gekennzeichneten
+                  Beispieldaten und lokal gespeichertem Profil und
+                  Bewerbungsstatus. KI-Orchestrator und Supabase-Anbindung sind
+                  vorbereitet; die Demo verwendet weiterhin den lokalen Store.
+                </p>
+                <span class="stack-inline"
+                  >Expo / React Native · TypeScript · vorbereiteter
+                  AI-Orchestrator</span
+                >
+              </div>
+              <div class="row-meta">
+                <span>MVP / Demo</span
+                ><a
+                  href="https://github.com/Saif-gut/ki-ausbildungs-assistent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="KI-Ausbildungs-Assistent: Quellcode auf GitHub"
+                  >GitHub ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-row">
+              <span class="row-number">06</span>
+              <div>
+                <h4>Bubble Pop</h4>
+                <p>
+                  Ein Roblox-Prototyp rund ums Platzenlassen von Bubbles. Hier
+                  beschäftige ich mich mit Gameplay und Progression; Ausrüstung,
+                  Pets und weitere Bereiche gehören zur Spielidee.
+                </p>
+                <span class="stack-inline">Roblox Studio · Lua / Luau</span>
+              </div>
+              <div class="row-meta">
+                <span>In Entwicklung</span
+                ><a
+                  href="https://github.com/Saif-gut/bubble-pop-game"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Bubble Pop: Quellcode auf GitHub"
+                  >GitHub ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-row">
+              <span class="row-number">07</span>
+              <div>
+                <h4>Java-Lagerverwaltung</h4>
+                <p>
+                  Ein bewusst kleines Konsolen-Lernprojekt. Aktuell steht das
+                  Menü; Eingabeverarbeitung, Klassen und Datenstrukturen sind
+                  die nächsten Schritte.
+                </p>
+                <span class="stack-inline">Java-Grundlagen · Konsole</span>
+              </div>
+              <div class="row-meta">
+                <span>Lernprojekt</span
+                ><a
+                  href="https://github.com/Saif-gut/java-lagerverwaltung"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Java-Lagerverwaltung: Quellcode auf GitHub"
+                  >GitHub ↗</a
+                >
+              </div>
+            </article>
+            <p class="portfolio-note">
+              Und diese Seite? Ein eigenes Webprojekt mit HTML, CSS und
+              JavaScript.
+              <a
+                href="https://github.com/Saif-gut/saif-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Zum Quellcode ↗</a
+              >
+            </p>
+          </div>
         </div>
+      </section>
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div>
+            <p class="eyebrow">02 / Über mich</p>
+            <h2 id="about-title">
+              Ich lerne am meisten,<br />wenn ich <em>etwas baue.</em>
+            </h2>
+          </div>
+          <div class="about-copy">
+            <p class="lead">
+              Und dabei auf Probleme stoße, die ich vorher noch nicht kannte.
+            </p>
+            <p>
+              Mein Weg in die IT war nicht von Anfang an geplant. Ich habe
+              selbst angefangen, Webseiten, Tools und Spiele zu bauen. Mit jedem
+              Projekt wurde klarer, dass ich beruflich in die
+              Softwareentwicklung möchte.
+            </p>
+            <p id="warum-it">
+              Besonders interessieren mich Python, Backend und APIs: die Teile
+              einer Anwendung, die Daten verarbeiten und Abläufe verbinden.
+              Spiele sind für mich ein anderer Zugang – mit sichtbarem Feedback
+              und ganz eigenen technischen Problemen.
+            </p>
+            <p>
+              Ich stehe am Anfang meiner beruflichen Laufbahn. Eigene Projekte
+              geben mir praktische Erfahrung; im Team möchte ich lernen, wie
+              andere entwickeln, Entscheidungen begründen und Code gemeinsam
+              verbessern.
+            </p>
+            <p class="about-aside" id="erfahrung">
+              Aus meiner bisherigen Arbeit bringe ich Erfahrung mit Kunden und
+              Kollegen mit. Absprachen einhalten und Aufgaben selbstständig
+              erledigen gehört für mich dazu.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="skills section"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">03 / Kenntnisse</p>
+            <h2 id="skills-title">
+              Werkzeuge mit<br /><span class="muted"
+                >einem konkreten Einsatz.</span
+              >
+            </h2>
+            <p>
+              Hier steht, womit ich gearbeitet habe und was ich noch vertiefen
+              möchte.
+            </p>
+          </div>
+          <dl class="skill-list">
+            <div>
+              <dt><span>01</span>Software &amp; Web</dt>
+              <dd>
+                <strong
+                  >Python, JavaScript, TypeScript, HTML, CSS, React</strong
+                >
+                <p>
+                  In eigenen Tools, Webanwendungen und Codegarten eingesetzt.
+                  Architektur und wartbaren Code lerne ich weiter.
+                </p>
+              </dd>
+            </div>
+            <div>
+              <dt><span>02</span>Backend &amp; Daten</dt>
+              <dd>
+                <strong>FastAPI, REST APIs, SQL, SQLite, PostgreSQL</strong>
+                <p>
+                  Frontend und Backend im Jarvis Dashboard verbunden; lokale und
+                  serverseitige Speicherung in meinen Projekten.
+                </p>
+              </dd>
+            </div>
+            <div>
+              <dt><span>03</span>Tools &amp; Betrieb</dt>
+              <dd>
+                <strong>Git, GitHub, Docker, Browser- und E2E-Tests</strong>
+                <p>
+                  Versionierung, Tests und Release-Prüfungen. Docker und
+                  PostgreSQL im Codegarten-Projekt; DevOps und Cloud möchte ich
+                  künftig vertiefen.
+                </p>
+              </dd>
+            </div>
+            <div>
+              <dt><span>04</span>Game Development</dt>
+              <dd>
+                <strong>Godot, GDScript, Roblox Studio, Lua / Luau</strong>
+                <p>
+                  3D-Lobby und Netzwerkgrundlagen in Last Letter Club; Gameplay
+                  und Progression im Roblox-Prototyp.
+                </p>
+              </dd>
+            </div>
+            <div>
+              <dt><span>05</span>KI &amp; Automatisierung</dt>
+              <dd>
+                <strong>Ollama, KI-gestützte Entwicklung, Codex</strong>
+                <p>
+                  Lokale KI im Jarvis Assistant. KI-Werkzeuge nutze ich zum
+                  Entwickeln und Prüfen. n8n ist ein Lernbereich; AI Engineering
+                  ein Zukunftsinteresse.
+                </p>
+              </dd>
+            </div>
+          </dl>
+          <p class="skills-footnote">
+            Java ist für mich derzeit ein Grundlagen-Lernbereich. Ein
+            eingesetztes Werkzeug bedeutet hier keine Expertenkenntnis.
+          </p>
+        </div>
+      </section>
+      <section class="path section" id="lernweg" aria-labelledby="path-title">
+        <div class="container path-layout">
+          <div>
+            <p class="eyebrow">04 / Mein Weg</p>
+            <h2 id="path-title">
+              Fortschritt statt<br />perfekter Lebenslauf.
+            </h2>
+            <p class="path-intro">
+              Erst eine Webseite. Dann ein Backend. Inzwischen ein größeres
+              Produkt. Die Themen wechseln – das praktische Lernen bleibt.
+            </p>
+          </div>
+          <ol class="path-list">
+            <li>
+              <span>Der Anfang</span>
+              <h3>Grundlagen ausprobieren.</h3>
+              <p>
+                Mit HTML, CSS und JavaScript eigene Seiten bauen und verstehen,
+                wie Struktur, Gestaltung und Logik zusammenspielen.
+              </p>
+            </li>
+            <li>
+              <span>Die Verbindung</span>
+              <h3>Aus Teilen eine Anwendung machen.</h3>
+              <p>
+                Mit Jarvis und dem Dashboard Python, APIs und lokale Daten
+                zusammenbringen. Mit Godot Spielregeln und Netzwerkzustände
+                kennenlernen.
+              </p>
+            </li>
+            <li>
+              <span>Der aktuelle Schwerpunkt</span>
+              <h3>Ein Produkt weiterentwickeln.</h3>
+              <p>
+                Mit Codegarten an Lernlogik, mehreren Ausführungsumgebungen,
+                Sync, Datenmigrationen und überprüfbaren Releases arbeiten.
+              </p>
+            </li>
+          </ol>
+        </div>
+        <div class="container training" id="ausbildung">
+          <p class="eyebrow">Der nächste Schritt / ab 2027</p>
+          <div class="training-layout">
+            <h3>
+              In einem Team lernen.<br /><em>Professionell entwickeln.</em>
+            </h3>
+            <div>
+              <p>
+                Ich suche eine Ausbildung zum Fachinformatiker für
+                Anwendungsentwicklung. Ich möchte meine praktischen Erfahrungen
+                vertiefen und lernen, wie Software im Team geplant, entwickelt,
+                getestet und betrieben wird.
+              </p>
+              <p>
+                Langfristig interessieren mich besonders Python, Backend,
+                DevOps, Cloud und KI-Integration. Die Ausbildung soll dafür eine
+                fundierte Grundlage schaffen.
+              </p>
+              <a class="button" href="mailto:saifaldienabbud@gmail.com"
+                >Über eine Ausbildung sprechen
+                <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="contact section"
+        id="kontakt"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <p class="eyebrow">05 / Kontakt</p>
+          <div class="contact-layout">
+            <div>
+              <h2 id="contact-title">Lernen wir<br />uns <em>kennen.</em></h2>
+              <p>
+                Fragen zu einem Projekt oder ein passender Ausbildungsplatz? Ich
+                freue mich auf Ihre Nachricht.
+              </p>
+            </div>
+            <address>
+              <a class="contact-email" href="mailto:saifaldienabbud@gmail.com"
+                ><span>E-Mail</span><strong>saifaldienabbud@gmail.com</strong
+                ><span aria-hidden="true">↗</span></a
+              ><a
+                href="https://github.com/Saif-gut"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><span>Projekte &amp; Code</span
+                ><strong>github.com/Saif-gut</strong
+                ><span aria-hidden="true">↗</span></a
+              ><a href="https://abbud.de"
+                ><span>Portfolio</span><strong>abbud.de</strong
+                ><span aria-hidden="true">↗</span></a
+              >
+            </address>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="current-year">2026</span> Saif Aldien</p>
+        <p>Gebaut, um weiterzukommen.</p>
+        <nav aria-label="Rechtliche Links">
+          <a href="impressum.html">Impressum</a
+          ><a href="datenschutz.html">Datenschutz</a>
+        </nav>
+        <a href="#start">Nach oben ↑</a>
       </div>
-    </section>
-
-    <section class="section experience" id="erfahrung" aria-labelledby="experience-title">
-      <div class="container experience-card"><div><p class="eyebrow">06 / Berufserfahrung</p><h2 id="experience-title">Was ich mitbringe.</h2></div><div><p>In meiner bisherigen Arbeit habe ich gelernt, mit Kunden und Kollegen umzugehen, Absprachen einzuhalten und Aufgaben selbstständig zu erledigen. Das möchte ich auch in ein IT-Team mitnehmen.</p><ul class="tag-list"><li>Kundenkontakt</li><li>Teamarbeit</li><li>Verantwortung</li><li>Selbstständiges Arbeiten</li></ul></div></div>
-    </section>
-
-    <section class="section training" id="ausbildung" aria-labelledby="training-title">
-      <div class="container"><article class="training-card">
-        <div class="training-card__intro"><p class="eyebrow">07 / Ausbildung</p><h2 id="training-title">Mein nächster Schritt:<br><span>eine IT-Ausbildung.</span></h2><div class="training-meta"><span>Ab 2027</span><span>Deutschland</span></div></div>
-        <div class="training-copy"><p class="training-card__status"><i></i>Offen für Ausbildungsangebote</p><p>Ich suche einen Ausbildungsplatz im IT-Bereich, besonders in der Software- und Anwendungsentwicklung. Fachinformatiker für Anwendungsentwicklung wäre zum Beispiel eine passende Richtung.</p><p>Ich bringe erste eigene Projekte und die Bereitschaft mit, dazuzulernen. Jetzt möchte ich erleben, wie Entwicklung im Arbeitsalltag funktioniert, und mich im Team einbringen.</p><a class="button button--primary" href="#kontakt">Kontakt aufnehmen <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-      </article></div>
-    </section>
-
-    <section class="section contact" id="kontakt" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="contact-copy"><p class="eyebrow">08 / Kontakt</p><h2 id="contact-title">Ich freue mich<br>auf Ihre Nachricht.</h2><p>Sie haben Fragen zu meinen Projekten oder einen passenden Ausbildungsplatz? Schreiben Sie mir gerne.</p><a class="text-link" href="mailto:saifaldienabbud@gmail.com">E-Mail schreiben <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-        <address class="contact-card"><div class="contact-item"><svg aria-hidden="true"><use href="#icon-mail"/></svg><div><small>E-Mail</small><a href="mailto:saifaldienabbud@gmail.com">saifaldienabbud@gmail.com</a></div></div><div class="contact-item"><svg aria-hidden="true"><use href="#icon-github"/></svg><div><small>Projekte &amp; Code</small><a href="https://github.com/Saif-gut" target="_blank" rel="noopener noreferrer">github.com/Saif-gut <svg aria-hidden="true"><use href="#icon-external"/></svg></a></div></div><div class="contact-item"><svg aria-hidden="true"><use href="#icon-pin"/></svg><div><small>Standort</small><strong>Deutschland</strong></div></div></address>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer"><div class="container"><p>© <span id="current-year">2026</span> Saif Aldien</p><span>Mein Weg in die IT.</span><nav aria-label="Rechtliche Links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav><a class="back-top" href="#start">Nach oben ↑</a></div></footer>
-</body>
+    </footer>
+  </body>
 </html>

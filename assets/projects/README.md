@@ -1,15 +1,13 @@
-# Projektbilder
+﻿# Projektbilder
 
-Die Projektkarten verwenden eigene CSS-Illustrationen. Sie stellen Themen der Projekte dar, keine Screenshots oder Live-Daten. Es werden keine Bilddateien automatisch nachgeladen. Echte Projektbilder können hier später abgelegt und in der jeweiligen Karte in `index.html` eingebunden werden.
+Verwendet werden echte, lokal eingebundene und als WebP komprimierte Screenshots:
 
-Vorgesehene Ordner:
+- `codegarten/dashboard.webp`: Codegarten-Dashboard, 1440 × 960; isolierter Gastmodus im vorhandenen lokalen Build.
+- `codegarten/editor.webp`: vorhandener echter Python-Editor-Test-Screenshot, 1440 × 1594.
+- `last-letter-club/lobby.webp`: vorhandener echter Godot-Lobby-Screenshot, 1600 × 680.
 
-- `jarvis/`
-- `bot/`
-- `last-letter-club/`
-- `bubble-pop/`
-- `ausbildungs-assistent/`
-- `java/`
-- `portfolio/`
+Alle Bilder sind in `index.html` mit Abmessungen, Alt-Text, Lazy Loading und asynchroner Dekodierung eingebunden. Ein Klick öffnet das Originalbild. Es gibt keine generierten Produkt-Screenshots.
 
-Empfehlung: pro Projekt ein optimiertes Querformat-Bild (mindestens 1200 × 675 px) als WebP oder JPG ablegen und danach die jeweilige Card in `index.html` auf das Bild umstellen.
+Die Codegarten-Lernstufen und die Jarvis-Architektur sind ausdrücklich schematische Darstellungen in HTML/CSS. Für die übrigen Projekte wird eine typografische Liste verwendet.
+
+Weitere echte Screenshots erst nach Prüfung des Inhalts einbinden. Nach neuen Assets auch die Dateiliste in `scripts/build.mjs` aktualisieren und Build sowie Tests ausführen. Bildherkunft: `docs/CONTENT-SOURCES.md`.

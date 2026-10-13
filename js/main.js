@@ -1,107 +1,94 @@
 "use strict";
-
-document.documentElement.classList.add("js-enabled");
+// All content and anchors work without JavaScript. Enhance only the navigation.
 const menuToggle = document.querySelector(".menu-toggle");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-function closeMobileMenu() {
-  if (!menuToggle || !mobileMenu) return;
+const navigation = document.querySelector(".main-nav");
+const mobileViewport = window.matchMedia("(max-width: 800px)");
+function closeMenu() {
+  if (!menuToggle || !navigation) return;
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Menü öffnen");
-  mobileMenu.classList.remove("is-open");
+  navigation.classList.remove("is-open");
 }
-
-if (menuToggle && mobileMenu) {
+if (menuToggle && navigation) {
+  document.documentElement.classList.add("js-enabled");
+  menuToggle.hidden = false;
   menuToggle.addEventListener("click", () => {
-    const willOpen = menuToggle.getAttribute("aria-expanded") !== "true";
-    menuToggle.setAttribute("aria-expanded", String(willOpen));
-    menuToggle.setAttribute("aria-label", willOpen ? "Menü schließen" : "Menü öffnen");
-    mobileMenu.classList.toggle("is-open", willOpen);
+    const opening = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(opening));
+    navigation.classList.toggle("is-open", opening);
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
-      closeMobileMenu();
+    if (event.key === "Escape" && navigation.classList.contains("is-open")) {
+      closeMenu();
       menuToggle.focus();
     }
   });
   document.addEventListener("click", (event) => {
-    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) closeMobileMenu();
+    if (
+      !navigation.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    )
+      closeMenu();
   });
-  window.matchMedia("(min-width: 961px)").addEventListener("change", (event) => {
-    if (event.matches) closeMobileMenu();
+  document.addEventListener("focusin", (event) => {
+    if (
+      !navigation.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    )
+      closeMenu();
   });
+  mobileViewport.addEventListener("change", closeMenu);
 }
-
-// Native anchors preserve browser history and work without JavaScript.
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", () => {
-    const target = document.getElementById(link.getAttribute("href").slice(1));
+    const target = document.getElementById(link.hash.slice(1));
     if (!target) return;
-    if (mobileMenu?.contains(link)) closeMobileMenu();
-    target.setAttribute("tabindex", "-1");
+    closeMenu();
+    const alreadyFocusable = target.hasAttribute("tabindex");
+    if (!alreadyFocusable) target.setAttribute("tabindex", "-1");
     target.focus({ preventScroll: true });
-    target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+    if (!alreadyFocusable)
+      target.addEventListener(
+        "blur",
+        () => target.removeAttribute("tabindex"),
+        { once: true },
+      );
   });
 });
-
-const filterGroup = document.querySelector(".project-filter");
-const filterButtons = Array.from(document.querySelectorAll(".project-filter__button"));
-const projectCards = Array.from(document.querySelectorAll(".project-hub__card"));
-const projectCount = document.querySelector("#project-count");
-if (filterGroup) filterGroup.hidden = false;
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach((item) => {
-      const active = item === button;
-      item.classList.toggle("is-active", active);
-      item.setAttribute("aria-pressed", String(active));
-    });
-    let visibleCount = 0;
-    projectCards.forEach((card) => {
-      card.hidden = filter !== "all" && !card.dataset.category.split(" ").includes(filter);
-      if (!card.hidden) visibleCount++;
-    });
-    if (projectCount) projectCount.textContent = `${visibleCount} ${visibleCount === 1 ? "Projekt" : "Projekte"} angezeigt.`;
-  });
-});
-
-// Section starts keep long sections active while scrolling through them.
-const navigationLinks = Array.from(document.querySelectorAll('.side-nav a[href^="#"], .mobile-menu a[href^="#"]'));
-const sectionIds = [...new Set(navigationLinks.map((link) => link.hash.slice(1)))];
-const navigationSections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
-let scrollQueued = false;
-let currentSection = "";
-
+const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
+const sections = navLinks
+  .map((link) => document.getElementById(link.hash.slice(1)))
+  .filter(Boolean);
+let queued = false;
+let activeId;
 function updateNavigation() {
-  scrollQueued = false;
-  const offset = window.innerWidth <= 960 ? 130 : 100;
-  let active = navigationSections[0]?.id;
-  navigationSections.forEach((section) => {
-    if (section.getBoundingClientRect().top <= offset) active = section.id;
+  queued = false;
+  let active = sections[0]?.id;
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= 150) active = section.id;
   });
-  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) active = navigationSections.at(-1)?.id;
-  if (active === currentSection) return;
-  currentSection = active;
-  navigationLinks.forEach((link) => {
-    const isActive = link.hash === `#${active}`;
-    link.classList.toggle("active", isActive);
-    if (isActive) link.setAttribute("aria-current", "location");
+  if (
+    window.scrollY + window.innerHeight >=
+    document.documentElement.scrollHeight - 2
+  )
+    active = sections.at(-1)?.id;
+  if (active === activeId) return;
+  activeId = active;
+  navLinks.forEach((link) => {
+    if (link.hash === `#${active}`)
+      link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   });
 }
-
-function queueNavigationUpdate() {
-  if (scrollQueued) return;
-  scrollQueued = true;
+function queueNavigation() {
+  if (queued) return;
+  queued = true;
   requestAnimationFrame(updateNavigation);
 }
-window.addEventListener("scroll", queueNavigationUpdate, { passive: true });
-window.addEventListener("resize", queueNavigationUpdate);
-window.addEventListener("load", updateNavigation);
-if ("ResizeObserver" in window) new ResizeObserver(queueNavigationUpdate).observe(document.body);
+window.addEventListener("scroll", queueNavigation, { passive: true });
+window.addEventListener("resize", queueNavigation);
+window.addEventListener("load", queueNavigation);
+if ("ResizeObserver" in window)
+  new ResizeObserver(queueNavigation).observe(document.body);
 updateNavigation();
-
-const yearElement = document.querySelector("#current-year");
-if (yearElement) yearElement.textContent = String(new Date().getFullYear());
+const year = document.getElementById("current-year");
+if (year) year.textContent = String(new Date().getFullYear());

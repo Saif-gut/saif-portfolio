@@ -1,0 +1,15 @@
+# GitHub Pages currently builds from the repository root. Exclude development files.
+exclude:
+  - README.md
+  - docs
+  - scripts
+  - tests
+  - package.json
+  - package-lock.json
+  - playwright.config.js
+  - node_modules
+  - dist
+  - test-results
+  - playwright-report
+  - assets/images/README.txt
+  - assets/projects/README.md

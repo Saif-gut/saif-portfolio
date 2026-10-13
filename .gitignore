@@ -11,3 +11,8 @@ credentials.*
 *.key
 *.pem
 .idea/
+node_modules/
+dist/
+test-results/
+playwright-report/
+.qa/
