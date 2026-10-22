@@ -120,6 +120,9 @@ test("course data and details remain accessible without JavaScript", async ({
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
+  await page.locator('.main-nav a[href="#projekte"]').click();
+  await expect(page.locator("#projekte")).toBeInViewport();
+  expect(await page.locator("#projekte").evaluate(section => section.getBoundingClientRect().top)).toBeGreaterThanOrEqual(0);
   await context.close();
 });
 

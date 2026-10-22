@@ -12,11 +12,21 @@
 - Projektfilter: Anwendungen 3, Games 2, Lernprojekte/Archiv 2, Alle 7. Zähler und sichtbare Einträge stimmen überein.
 - Codegarten-Galerie: Editor wird sichtbar, Dashboard ausgeblendet. Die Bilder sind unverändert echte Projektaufnahmen.
 
-## Noch laufende Abschlussprüfung
+## Erfolgreicher GitHub-Prüflauf
 
-Der ursprüngliche lokale Aufruf von `npm test` konnte keinen Testbrowser starten. Alle 13 damaligen Tests scheiterten vor der eigentlichen Ausführung am fehlenden Playwright-Browserpaket. Es wird daraus kein bestandener Browser- oder Axe-Test abgeleitet.
+Der separate GitHub-Runner hat für Commit `decad141a00ba035b632aff9003a0b190f4e9395` **15/15 Playwright-Tests bestanden**, Lauf [39806242869](https://github.com/Saif-gut/saif-portfolio/actions/runs/39806242869). Tatsächliche Testdauer: 19,8 Sekunden.
 
-Die Suite wurde auf das neue Design angepasst und um Filter-/Galerie- sowie Ressourcen-/Privatlink-Prüfungen ergänzt. Sie wird auf einem separaten GitHub-Runner mit installiertem Chromium ausgeführt, bevor dieser Stand auf `main` veröffentlicht wird. Der tatsächliche Laufstatus wird hier anschließend ergänzt.
+Enthalten: Layout, Bilder, JavaScript-/HTTP-Fehler und Axe (WCAG 2 A/AA, WCAG 2.1 AA) bei acht Breiten; mobile Tastaturbedienung und Navigation; Inhalte und Kurszahlen ohne JavaScript; Skip-Link und reduzierte Bewegung; beide rechtlichen Seiten; Projektfilter, Screenshot-Wechsel, Rückkehr zu einem ausgefilterten Projekt; lokale Ressourcen und fehlender Quellcode-Link zum persönlichen Assistenten. Keine automatisiert erkannten Axe-Verstöße.
+
+Der ursprüngliche lokale Aufruf von `npm test` konnte keinen Testbrowser starten. Die 13 damaligen Tests scheiterten vor der Ausführung am fehlenden Playwright-Browserpaket. Der erfolgreiche Nachweis stammt ausdrücklich vom GitHub-Runner mit installiertem Chromium.
+
+Der CI-Secret-Scan umfasste zu diesem Zeitpunkt 21 Commits und 89 historische Blobs. Der bekannte historische Archivpfad wird weiterhin als Prüfhinweis ausgewiesen. npm-Audit und Build waren erfolgreich. Ein abschließender Lauf prüft zusätzlich die Navigation ohne JavaScript nach einer kleinen Header-Korrektur.
+
+## Geänderte Dateien
+
+`index.html`, `css/style.css`, `js/main.js`, `assets/favicon.svg`, `impressum.html`, `datenschutz.html`, `package.json`, `package-lock.json`, `_config.yml`, `.gitignore`, `README.md`, `scripts/check.mjs`, `scripts/serve.mjs`, `scripts/audit-history.mjs`, `tests/portfolio.spec.js`, `.github/workflows/verify.yml`, `.github/dependabot.yml`, `.github/SECURITY.md`, `docs/CONTENT-SOURCES.md`, `docs/SECURITY-REVIEW.md`, `docs/VALIDATION.md`.
+
+Die drei bestehenden WebP-Projektbilder und `CNAME` wurden unverändert erhalten. Interne Browser-Prüfrahmen und Testausgaben sind nicht Teil des veröffentlichten Repositories oder Website-Pakets.
 
 ## Grenzen
 

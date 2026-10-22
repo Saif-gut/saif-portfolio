@@ -9,3 +9,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 /* Keep long German labels inside the narrowest supported viewport. */
 .jarvis-story>*{min-width:0}.system-diagram dd{overflow-wrap:anywhere;hyphens:auto}
+.site-header{position:static}.js-enabled .site-header{position:sticky}

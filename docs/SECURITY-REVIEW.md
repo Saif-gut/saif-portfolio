@@ -48,7 +48,7 @@ Ausgangshistorie: **20 Commits, 68 unterschiedliche historische Blobs**. Keine Z
 - Dependabot-Konfiguration für npm und GitHub Actions, plus eine Sicherheitsmeldeanleitung.
 - npm-Abhängigkeiten bei der lokalen Prüfung ohne bekannte Schwachstellen.
 
-Die Aktivierung der neuen Workflowdateien wird bei der Veröffentlichung gesondert verifiziert; eine lokale YAML-Datei allein belegt keinen erfolgreichen GitHub-Lauf.
+Die neuen Workflowdateien wurden auf dem Prüfbranch erfolgreich aktiviert. Lauf 39806242869 bestand Build, npm-Audit, Secret-Scan und alle 15 Browsertests. Die Hauptveröffentlichung wird gesondert kontrolliert.
 
 ## Sichere Wege zu privaten Quellen
 
