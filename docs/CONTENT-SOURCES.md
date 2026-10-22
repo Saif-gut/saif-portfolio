@@ -1,29 +1,45 @@
-# Inhaltsgrundlage · Oktober 2026
+# Inhaltsgrundlage · 22. Oktober 2026
 
-Die öffentliche Seite positioniert Saif als Bewerber für eine Ausbildung in der Anwendungsentwicklung. Projektarbeit und Zukunftsinteressen werden getrennt beschrieben; es gibt keine Expertenratings.
+Die Website stellt Saif Aldien Abbud als Bewerber für eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung ab 2027 vor. Projektarbeit mit KI-Unterstützung wird von Expertenkenntnissen und Zukunftsinteressen getrennt.
 
-## Geprüfte Quellen
+## Quellen und Einordnung
 
-- **Codegarten:** vollständige bereitgestellte Datei `codegarten_portfolio_context.txt`; anschließend lokale `README.md`, `package.json`, `docs/1.0.1-REPORT.md` und `docs/BEGINNER-STEPS-UX.md`. Version 1.0.1, neun Kurse, 324 Lektionen, 39 Projekte. Die Kurszahlen stammen unverändert aus dem Kontext. Der ursprüngliche Bericht weist 454 Tests aus; der spätere Anfänger-Polish 520. Die öffentliche Formulierung „über 450“ bleibt bewusst konservativ. Die Tests von Codegarten wurden bei diesem Portfolioauftrag nicht erneut ausgeführt.
-- **Jarvis Dashboard:** lokale README und [öffentliches Repository](https://github.com/Saif-gut/jarvis-dashboard). React/TypeScript, Python/FastAPI, REST-Schnittstelle, SQLite, lokale Systemdaten sowie Aufgaben und Notizen. Wetter ist ein separater externer Abruf.
-- **Jarvis Assistant:** lokale README und [öffentliches Repository](https://github.com/Saif-gut/Jarvis-assistant). Lokale Spracherkennung mit Vosk/Whisper und lokale Ollama-Integration. Webrecherche und Online-Stimme sind ausdrücklich keine Offline-Funktionen.
-- **Last Letter Club:** aktuelle lokale README, vorhandene Godot-Projektdateien und [Repository](https://github.com/Saif-gut/last-letter-club). 3D-Lobby, Offline-Hotseat und private Netzwerkgrundlage; weiterhin ein Prototyp. Die separate ältere Projektkopie mit leerer Startszene wurde nicht als aktueller Stand verwendet.
-- **KI-Ausbildungs-Assistent:** aktuelle [Repository-README](https://github.com/Saif-gut/ki-ausbildungs-assistent). AusbildungsKompass ist ein klickbares Expo-MVP mit Beispieldaten und lokalem Store. Supabase und AI-Orchestrator sind vorbereitet. Keine echte öffentliche Stellensuche oder produktive Cloud-Anbindung behauptet.
-- **Bubble Pop:** lokale README und [Repository](https://github.com/Saif-gut/bubble-pop-game). Vorhandener Roblox-Place, Entwicklung/Prototyp. Ausrüstung und Pets werden als Spielidee eingeordnet.
-- **Java:** lokale README und [Repository](https://github.com/Saif-gut/java-lagerverwaltung). Konsolenmenü; weitere Logik, Klassen und Datenhaltung sind Lernschritte.
+| Projekt | Geprüfte Grundlage | Öffentliche Darstellung |
+| --- | --- | --- |
+| Codegarten | Vollständige aktuelle Datei `codegarten_portfolio_context.txt` vom 13.10.2026; vorhandene Repository-Dokumentation und echte Bilder | Dokumentierter Stand 1.0.1, neun Lernbereiche, 324 Lektionen, 39 Projekte, über 450 Tests laut Bericht. Keine erneute Ausführung seiner Tests und keine Behauptung eines neu geprüften Live-Releases. |
+| Jarvis Dashboard | Aktuelle GitHub-README, Dateibaum mit React-Komponenten und FastAPI-/SQLite-Diensten | Lokal umgesetztes Full-Stack-Projekt; Systeminformationen, Aufgaben, Notizen und fest begrenzte Assistentensteuerung. Keine neue Funktionsprüfung des Dashboards behauptet. |
+| Jarvis Sprachassistent | Aktueller Auftrag und bereitgestelltes Portfolio-Briefing | Persönliches Projekt, Spracheingabe/-ausgabe, Ollama und KI-gestützte Entwicklung. Kein Link zu Quellcode oder internen Dateien. |
+| Last Letter Club | Aktuelle GitHub-README, vorhandener echter Lobby-Screenshot | Spielbarer Godot-Prototyp: Offline-Hotseat, private Netzwerklobby, zwei unabhängige Tische; weiterhin in Entwicklung. |
+| Bubble Pop | Aktuelle README und Dateibaum des Repositories; `Place1.rbxl` vorhanden | Roblox-Prototyp in Entwicklung. Die interne Place-Datei wurde nicht in Roblox Studio ausgeführt; keine vollständigen Shop-/Pet-Systeme oder Veröffentlichung als bestätigt dargestellt. |
+| Java-Lagerverwaltung | Aktuelle README und `Main.java` direkt gelesen | Kleines Konsolen-Lernprojekt. Der Code gibt ein Menü aus; Eingabeverarbeitung und Bestandsänderungen sind nicht umgesetzt. |
+| KI-Ausbildungs-Assistent | Aktuelle README und Dateibaum, vorhandene Portfolio-Übergabe | Pausiertes/archiviertes Expo-MVP mit Beispieldaten und lokalem Store. Supabase und KI-Orchestrator vorbereitet; kein aktiver öffentlicher Dienst. |
 
-Keine weiteren Projekte wurden allein aus Dateinamen abgeleitet. Alle sieben bisherigen Projekte bleiben erhalten; die Portfolio-Website wird nur als kurze Fußnote erwähnt. Codegarten kommt als neues Hauptprojekt hinzu.
+Öffentliche Repository-Quellen befinden sich unter https://github.com/Saif-gut. Links zur Seite verweisen nur auf die tatsächlich vorhandenen Projekte. Der Assistent erhält keinen Quellcode-Link, obwohl das entsprechende GitHub-Repository zum Prüfzeitpunkt öffentlich war. Diese Portfolioänderung ändert keine Sichtbarkeit anderer Repositories.
+
+## Codegarten
+
+Das vollständige Projektbriefing ersetzt die ältere Beschreibung als reine Idee. Das siebenstufige Modell wird ausführlich gezeigt: erkennen, ergänzen, debuggen, verändern, selbst schreiben, Projekte bauen, im leeren Editor lösen.
+
+Die Kurszeilen ergeben zusammen 324 Lektionen und 39 Projekte. Python/Pyodide, JavaScript-Isolation, HTML/CSS-Vorschau und SQLite unterscheiden sich von den Git-/Linux-Simulationen und den statischen Java-/C#-/C++-Prüfungen. Diese Grenzen werden ausdrücklich genannt. Ein realer Nachweis der Lernwirkung mit Anfängern wird nicht behauptet.
+
+Die Codegarten-Quellanwendung und ihre ursprünglichen Testberichte sind in dieser Sitzung nicht als vollständiges Repository vorhanden. Die Zahlen werden daher als dokumentierter Stand mit Datum veröffentlicht. Die frühere pauschale Prozentangabe zum KI-Codeanteil entfällt; die konkrete Zusammenarbeit mit Coding-Agenten bleibt beschrieben.
+
+## Nicht neu als bestätigte Projekte veröffentlicht
+
+- **Game Developer Tycoon:** Der Nutzer beschreibt eine öffentliche Roblox-Veröffentlichung mit Stadt, Studios, Mitarbeitern, Wirtschaft, Speicherung und Marketing. Unter den zugänglichen Repositories und Dateien wurde kein zugehöriger Place, Spiel-Link oder geeigneter echter Screenshot gefunden. Die Thumbnail-Datei wäre kein Beleg für Gameplay oder Veröffentlichung. Diese Angaben wurden deshalb nicht als technisch geprüft veröffentlicht.
+- **Stone Planet:** Ein gespeicherter Analysebericht belegt eine ältere V3-Basis. Die aktuellen V4/V5-Dateien liegen hier nicht vor. Kein veralteter Zwischenstand wird als aktueller Release ausgegeben.
+- **Godot-Fanprojekt:** Älteres Briefing und eine Archivdatei vorhanden, aber kein hier geprüfter aktueller Projektstand. Der Eintrag wurde nicht zusätzlich aufgenommen.
 
 ## Bildherkunft
 
-Die Angabe, dass rund 75 % des Codes von ChatGPT/Codex erstellt wurden, stammt aus Saifs ergänzender Angabe vom 13. Oktober 2026. Sie beschreibt den Anteil der KI-generierten Umsetzung; Konzeption, Anforderungen, Entscheidungen, Tests und Qualitätssicherung werden als seine Rolle benannt.
+Unverändert erhaltene echte Projektaufnahmen:
 
-- `assets/projects/codegarten/dashboard.webp`: neuer Screenshot aus dem vorhandenen lokalen Production-Build von Codegarten, 1440 × 960. Eigener isolierter Gast-Browserkontext ohne persönliches Profil.
-- `assets/projects/codegarten/editor.webp`: echter vorhandener Editor-Test-Screenshot, 1440 × 1594, mit Codeausgabe und progressiven Hinweisen.
-- `assets/projects/last-letter-club/lobby.webp`: echter vorhandener Godot-Lobby-Screenshot, 1600 × 680.
+- `assets/projects/codegarten/dashboard.webp`: 1440 × 960, Dashboard im isolierten Gastmodus laut bestehender Bilddokumentation.
+- `assets/projects/codegarten/editor.webp`: 1440 × 1594, echter Python-Editor-Test-Screenshot.
+- `assets/projects/last-letter-club/lobby.webp`: 1600 × 680, vorhandene Godot-Lobby.
 
-Die Bilder sind als WebP komprimiert, ohne erfundene UI. Lernmodell und Jarvis-Architektur sind ausdrücklich schematische Darstellungen. Keine generierten Produktscreenshots.
+Keine Bilder wurden generiert oder als neue Produktaufnahmen ausgegeben. Die Jarvis-Datenstruktur ist als schematische Darstellung gekennzeichnet. Aus Datenschutzgründen wurden keine privaten Dashboard- oder Assistentendaten abgebildet.
 
-## Offene Angaben
+## Bekannte Inhaltslücke
 
-Codegarten hat kein bestätigtes öffentliches Repository oder Deployment; deshalb gibt es keinen erfundenen GitHub- oder Live-Demo-Link. Impressum und Datenschutz enthalten weiterhin die schon vorhandenen persönlichen bzw. Hosting-Platzhalter. Der belegte Host GitHub Pages ersetzt den veralteten IONOS-Hinweis. Adressdaten wurden nicht erfunden oder aus privaten Dateien übernommen.
+Die bestehenden Platzhalter für die postalische Anschrift in Impressum und Datenschutz bleiben offen. Sie wurden nicht aus anderen privaten Unterlagen übernommen und nicht erfunden. Die rechtlichen Texte werden nicht als vollständig oder rechtlich geprüft ausgewiesen.

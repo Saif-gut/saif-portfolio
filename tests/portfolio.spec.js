@@ -26,7 +26,8 @@ for (const width of [320, 390, 430, 768, 1024, 1366, 1440, 1920]) {
         ),
       ).toBe(true);
     }
-    for (const img of await page.locator("img").all()) {
+    await page.getByRole("button", { name: "Python-Editor", exact: true }).click();
+    for (const img of await page.locator("img:visible").all()) {
       await img.scrollIntoViewIfNeeded();
       await expect
         .poll(() =>
@@ -34,6 +35,7 @@ for (const width of [320, 390, 430, 768, 1024, 1366, 1440, 1920]) {
         )
         .toBe(true);
     }
+    await page.getByRole("button", { name: "Lernraum", exact: true }).click();
     const overflowing = await page.locator("main *").evaluateAll((elements) =>
       elements
         .filter((element) => {
@@ -151,7 +153,35 @@ for (const file of ["impressum.html", "datenschutz.html"]) {
     expect(audit.violations.map((item) => item.id)).toEqual([]);
     await page.getByRole("link", { name: "Zurück zum Portfolio" }).click();
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      "Software bauen.",
+      "Saif Aldien",
     );
   });
 }
+
+test("project filters, count, restoration and gallery", async ({ page }) => {
+  await page.goto("/");
+  for (const [category, count] of [["app", 3], ["game", 2], ["study", 2], ["all", 7]]) {
+    await page.locator(`[data-filter="${category}"]`).click();
+    await expect(page.locator("[data-project]:visible")).toHaveCount(count);
+    await expect(page.locator(".filter-status")).toHaveText(`${count} Projekte`);
+    await expect(page.locator(`[data-filter="${category}"]`)).toHaveAttribute("aria-pressed", "true");
+  }
+  await page.getByRole("button", { name: "Python-Editor", exact: true }).click();
+  await expect(page.locator("#screen-editor")).toBeVisible();
+  await expect(page.locator("#screen-dashboard")).toBeHidden();
+  await page.locator('[data-filter="game"]').click();
+  await page.getByRole("link", { name: "Codegarten ansehen", exact: true }).click();
+  await expect(page.locator("#codegarten")).toBeVisible();
+  await expect(page.locator('[data-filter="all"]')).toHaveAttribute("aria-pressed", "true");
+});
+
+test("publication uses local resources and keeps private assistant unlinked", async ({ page }) => {
+  const external=[];
+  page.on("request", request => { if(new URL(request.url()).origin !== "http://127.0.0.1:4174") external.push(request.url()); });
+  await page.goto("/");
+  await expect(page.locator('a[href*="Jarvis-assistant"]')).toHaveCount(0);
+  const csp=await page.locator('meta[http-equiv="Content-Security-Policy"]').getAttribute("content");
+  expect(csp).toContain("object-src 'none'");
+  expect(csp).toContain("connect-src 'none'");
+  expect(external).toEqual([]);
+});

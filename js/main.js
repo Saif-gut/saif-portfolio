@@ -92,3 +92,67 @@ if ("ResizeObserver" in window)
 updateNavigation();
 const year = document.getElementById("current-year");
 if (year) year.textContent = String(new Date().getFullYear());
+
+// Progressive enhancement: without JavaScript every project and image is visible.
+const projects = [...document.querySelectorAll("[data-project]")];
+const filters = [...document.querySelectorAll("[data-filter]")];
+const projectControls = document.querySelector(".project-controls");
+function filterProjects(category) {
+  let count = 0;
+  projects.forEach((project) => {
+    project.hidden = category !== "all" && project.dataset.project !== category;
+    project.classList.remove("first-filtered");
+    if (!project.hidden) count++;
+  });
+  filters.forEach((button) =>
+    button.setAttribute("aria-pressed", String(button.dataset.filter === category)),
+  );
+  const compact = document.querySelector(".more-projects");
+  if (compact)
+    compact.hidden = ![...compact.querySelectorAll("[data-project]")].some(
+      (project) => !project.hidden,
+    );
+  projects.find((project) => !project.hidden)?.classList.add("first-filtered");
+  const status = document.querySelector(".filter-status");
+  if (status) status.textContent = `${count} ${count === 1 ? "Projekt" : "Projekte"}`;
+  queueNavigation();
+}
+if (projectControls && filters.length) {
+  projectControls.hidden = false;
+  filters.forEach((button) =>
+    button.addEventListener("click", () => filterProjects(button.dataset.filter)),
+  );
+}
+
+const galleryButtons = [...document.querySelectorAll("[data-view]")];
+const galleryScreens = [...document.querySelectorAll("[data-screen]")];
+function showScreen(view) {
+  galleryScreens.forEach((screen) => {
+    screen.hidden = screen.dataset.screen !== view;
+  });
+  galleryButtons.forEach((button) =>
+    button.setAttribute("aria-pressed", String(button.dataset.view === view)),
+  );
+}
+if (galleryButtons.length && galleryScreens.length) {
+  document.querySelector(".gallery-tabs").hidden = false;
+  showScreen("dashboard");
+  galleryButtons.forEach((button) =>
+    button.addEventListener("click", () => showScreen(button.dataset.view)),
+  );
+}
+
+// Direct links to an image/project must also work after a different filter was used.
+function revealAnchor(hash) {
+  const target = document.getElementById(hash.slice(1));
+  if (!target) return;
+  if (target.closest("[data-project]")?.hidden) filterProjects("all");
+  const screen = target.closest("[data-screen]");
+  if (screen?.hidden) showScreen(screen.dataset.screen);
+}
+document.addEventListener("click", (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (link) revealAnchor(link.hash);
+}, true);
+window.addEventListener("hashchange", () => revealAnchor(location.hash));
+revealAnchor(location.hash);

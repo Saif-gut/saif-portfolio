@@ -13,3 +13,5 @@ exclude:
   - playwright-report
   - assets/images/README.txt
   - assets/projects/README.md
+  - .github
+  - .openai

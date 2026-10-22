@@ -3,7 +3,12 @@ import { readFile } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 import { root } from "./check.mjs";
 const base = resolve(root, process.argv.includes("--dist") ? "dist" : ".");
-const port = Number(process.env.PORT || 4173);
+const argument = (flag) => {
+  const index = process.argv.indexOf(flag);
+  return index < 0 ? undefined : process.argv[index + 1];
+};
+const port = Number(argument("--port") || process.env.PORT || 4173);
+const host = argument("--host") || "127.0.0.1";
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -36,6 +41,6 @@ createServer(async (request, response) => {
     response.writeHead(404);
     response.end("Not found");
   }
-}).listen(port, "127.0.0.1", () =>
-  console.log(`Local: http://127.0.0.1:${port}`),
+}).listen(port, host, () =>
+  console.log(`Local: http://${host}:${port}`),
 );

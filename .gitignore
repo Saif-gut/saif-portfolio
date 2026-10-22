@@ -16,3 +16,17 @@ dist/
 test-results/
 playwright-report/
 .qa/
+.envrc
+*.p12
+*.pfx
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.backup
+*.zip
+*.7z
+*.tar
+*.gz
+*.bundle
+.openai/

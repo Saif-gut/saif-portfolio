@@ -24,7 +24,7 @@ export function check() {
       if (url.startsWith("#")) {
         if (!ids.includes(url.slice(1)))
           throw new Error(`Missing anchor ${url} in ${file}`);
-      } else if (!existsSync(resolve(root, url.split("#")[0])))
+      } else if (!existsSync(resolve(root, url.split(/[?#]/)[0])))
         throw new Error(`Missing asset ${url} in ${file}`);
       checked++;
     }
