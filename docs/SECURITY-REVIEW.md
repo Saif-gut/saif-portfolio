@@ -34,7 +34,7 @@ Ausgangshistorie: **20 Commits, 68 unterschiedliche historische Blobs**. Keine Z
 - Historischer Commit: `6098b33f4d71`.
 - Nicht im aktuellen Dateibaum, aber weiterhin über die öffentliche Git-Historie abrufbar.
 - 15.009 Bytes; beginnt mit ZIP-Signatur, hat aber kein gültiges Endverzeichnis. Python `zipfile` kann es nicht öffnen.
-- Der Inhalt konnte deshalb nicht vollständig auf sensible Dateien geprüft werden. Keine Bestätigung eines echten Secret-Leaks.
+- Eine zusätzliche Prüfung der lokalen ZIP-Header konnte README, Impressum, Datenschutz und Ignore-Datei mit gültigen CRC-Prüfsummen wiederherstellen und ohne Zugangsdatenmuster prüfen. Der komprimierte Index-Eintrag ist beschädigt; das Archiv konnte deshalb weiterhin nicht vollständig geprüft werden. Keine Bestätigung eines echten Secret-Leaks.
 - Maßnahme: ursprüngliches intaktes Archiv beschaffen und prüfen. Falls Zugangsdaten enthalten waren: zuerst beim Anbieter widerrufen/rotieren. Eine spätere gezielte Historienbereinigung muss separat vorbereitet werden; keine ungeprüfte Force-Push-Aktion im Bewerbungsportfolio.
 
 ## Umgesetzte Absicherung
@@ -48,7 +48,7 @@ Ausgangshistorie: **20 Commits, 68 unterschiedliche historische Blobs**. Keine Z
 - Dependabot-Konfiguration für npm und GitHub Actions, plus eine Sicherheitsmeldeanleitung.
 - npm-Abhängigkeiten bei der lokalen Prüfung ohne bekannte Schwachstellen.
 
-Die neuen Workflowdateien wurden auf dem Prüfbranch erfolgreich aktiviert. Lauf 39806242869 bestand Build, npm-Audit, Secret-Scan und alle 15 Browsertests. Die Hauptveröffentlichung wird gesondert kontrolliert.
+Die neuen Workflowdateien wurden auf dem Prüfbranch erfolgreich aktiviert. Lauf 39806242869 bestand Build, npm-Audit, Secret-Scan und alle 15 Browsertests. Auch der abschließende Prüfbranch-Lauf 39806775478, die Hauptbranch-Prüfung 39807265466 und das Pages-Deployment 39807265459 waren erfolgreich. Die Domainprüfung bestätigte beide HTTPS-Adressen und bytegenaue Übereinstimmung sämtlicher Website-Dateien.
 
 ## Sichere Wege zu privaten Quellen
 

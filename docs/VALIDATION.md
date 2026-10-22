@@ -3,7 +3,7 @@
 ## Bereits ausgeführt
 
 - `npm ci --ignore-scripts`: erfolgreich.
-- `npm run build`: drei HTML-Dokumente, 40 lokale Verweise, eindeutige IDs und JavaScript-Syntax erfolgreich geprüft. Zehn Veröffentlichungsdateien, insgesamt ungefähr 241 KiB, plus Veröffentlichungsmanifest.
+- `npm run build`: drei HTML-Dokumente, 40 lokale Verweise, eindeutige IDs und JavaScript-Syntax erfolgreich geprüft. Zehn Veröffentlichungsdateien, insgesamt ungefähr 242 KiB, plus Veröffentlichungsmanifest.
 - `npm audit --audit-level=high`: keine bekannten Schwachstellen gemeldet, einschließlich Entwicklungsabhängigkeiten.
 - `npm run audit:secrets`: komplette Ausgangshistorie mit 20 Commits und 68 unterschiedlichen historischen Blobs sowie aktueller Arbeitsstand. Keine Zugangsdatenmuster in lesbaren Quellen; ein beschädigtes historisches ZIP bleibt ein offener Prüffund.
 - Cloud-Browser: Desktop-Hero visuell kontrolliert. Keine Portfolio-JavaScript-Fehler beobachtet; eine Browser-Erweiterungsmeldung stammt außerhalb der Website.
@@ -20,7 +20,19 @@ Enthalten: Layout, Bilder, JavaScript-/HTTP-Fehler und Axe (WCAG 2 A/AA, WCAG 2.
 
 Der ursprüngliche lokale Aufruf von `npm test` konnte keinen Testbrowser starten. Die 13 damaligen Tests scheiterten vor der Ausführung am fehlenden Playwright-Browserpaket. Der erfolgreiche Nachweis stammt ausdrücklich vom GitHub-Runner mit installiertem Chromium.
 
-Der CI-Secret-Scan umfasste zu diesem Zeitpunkt 21 Commits und 89 historische Blobs. Der bekannte historische Archivpfad wird weiterhin als Prüfhinweis ausgewiesen. npm-Audit und Build waren erfolgreich. Ein abschließender Lauf prüft zusätzlich die Navigation ohne JavaScript nach einer kleinen Header-Korrektur.
+Der CI-Secret-Scan umfasste zu diesem Zeitpunkt 21 Commits und 89 historische Blobs. Der bekannte historische Archivpfad wird weiterhin als Prüfhinweis ausgewiesen. npm-Audit und Build waren erfolgreich. Auch der abschließende Prüfbranch-Lauf [39806775478](https://github.com/Saif-gut/saif-portfolio/actions/runs/39806775478) und der Lauf auf `main` [39807265466](https://github.com/Saif-gut/saif-portfolio/actions/runs/39807265466) waren erfolgreich. Beide prüfen zusätzlich die Navigation ohne JavaScript nach einer kleinen Header-Korrektur. Veröffentlichter Website-Commit: `e0ae98ec541bf59cc52db2f7ec3651fb78fa2748`.
+
+## Veröffentlichung und Prüfung der echten Domain
+
+GitHub-Pages-Lauf [39807265459](https://github.com/Saif-gut/saif-portfolio/actions/runs/39807265459): Jekyll-Build und Deployment erfolgreich.
+
+- `https://abbud.de/`: HTTP 200, neues Design sichtbar.
+- `https://www.abbud.de`: Weiterleitung auf `https://abbud.de/`, abschließend HTTP 200, neues Design sichtbar.
+- HTTPS mit aktiver Zertifikatsvalidierung erfolgreich; keine Zertifikatswarnung umgangen.
+- Alle drei HTML-Seiten, Stylesheet, JavaScript, Favicon und drei Projektbilder: HTTP 200, **bytegenau identisch** mit dem geprüften Quellstand.
+- Alle sechs öffentlichen GitHub-Links der Startseite: HTTP 200.
+- Veröffentlichtes Portfolio im Cloud-Browser geöffnet; Games-Filter zeigt zwei Projekte. Galerie-Schalter reagiert. Keine Website-Fehler in der Konsole beobachtet.
+- Repository nach der Veröffentlichung erneut als öffentlich bestätigt. Keine DNS-, Domain- oder Sichtbarkeitsänderung vorgenommen.
 
 ## Geänderte Dateien
 
